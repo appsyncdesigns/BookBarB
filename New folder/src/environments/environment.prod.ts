@@ -8,6 +8,6 @@
 */
 export const environment = {
   production: true,
-  baseUrl: 'https://appsyncdesigns.com/api/',
+  baseUrl: 'https://appsyncdesigns.github.io/',
   imageUrl: 'https://appsyncdesigns.com/api/images/',
 };
