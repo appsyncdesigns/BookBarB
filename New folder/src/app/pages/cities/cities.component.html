@@ -46,8 +46,9 @@
                             <input type="email" [(ngModel)]="email" class="form-control"
                                 [placeholder]="util.translate('Email ID')" [ngModelOptions]="{standalone: true}">
                         </div>
-
+                        
                     </form>
+
                     <br>
                     <button type="button" class="btn btn-success" *ngIf="this.action == 'create'"
                         (click)="createCity()">
