@@ -261,20 +261,20 @@ Route::prefix('/v1')->group(function () {
         Route::post('timeslots/getSlotsByForBookings', [TimeslotController::class, 'getSlotsByForBookings']);
 
         Route::post('specialist/getSpecialist', [SpecialistController::class, 'getBySalonID']);
-        // appoinments Routes
-        Route::get('appoinments/getAll', [AppointmentsController::class, 'getAll']);
-        Route::get('appoinments/getAllSalonAppointments', [AppointmentsController::class, 'getAllSalonAppointments']);
-        Route::get('appoinments/getAllFreelancerAppointments', [AppointmentsController::class, 'getAllFreelancerAppointments']);
-        Route::post('appoinments/create', [AppointmentsController::class, 'save']);
-        Route::post('appoinments/update', [AppointmentsController::class, 'update']);
-        Route::post('appoinments/destroy', [AppointmentsController::class, 'delete']);
-        Route::post('appoinments/getById', [AppointmentsController::class, 'getById']);
-        Route::post('appoinments/getMyList', [AppointmentsController::class,'getMyList']);
-        Route::post('appoinments/getInfo', [AppointmentsController::class,'getInfo']);
-        Route::post('appoinments/getInfoAdmin', [AppointmentsController::class,'getInfoAdmin']);
-        Route::post('appoinments/getInfoOwner', [AppointmentsController::class,'getInfoOwner']);
-        Route::post('appoinments/getSalonList', [AppointmentsController::class,'getSalonList']);
-        Route::post('appoinments/getIndividualList', [AppointmentsController::class,'getIndividualList']);
+        // appointments Routes
+        Route::get('appointments/getAll', [AppointmentsController::class, 'getAll']);
+        Route::get('appointments/getAllSalonAppointments', [AppointmentsController::class, 'getAllSalonAppointments']);
+        Route::get('appointments/getAllFreelancerAppointments', [AppointmentsController::class, 'getAllFreelancerAppointments']);
+        Route::post('appointments/create', [AppointmentsController::class, 'save']);
+        Route::post('appointments/update', [AppointmentsController::class, 'update']);
+        Route::post('appointments/destroy', [AppointmentsController::class, 'delete']);
+        Route::post('appointments/getById', [AppointmentsController::class, 'getById']);
+        Route::post('appointments/getMyList', [AppointmentsController::class,'getMyList']);
+        Route::post('appointments/getInfo', [AppointmentsController::class,'getInfo']);
+        Route::post('appointments/getInfoAdmin', [AppointmentsController::class,'getInfoAdmin']);
+        Route::post('appointments/getInfoOwner', [AppointmentsController::class,'getInfoOwner']);
+        Route::post('appointments/getSalonList', [AppointmentsController::class,'getSalonList']);
+        Route::post('appointments/getIndividualList', [AppointmentsController::class,'getIndividualList']);
 
         Route::post('appointments/getStats',[AppointmentsController::class, 'getStats'] );
         Route::post('appointments/getMonthsStats',[AppointmentsController::class, 'getMonthsStats']);
