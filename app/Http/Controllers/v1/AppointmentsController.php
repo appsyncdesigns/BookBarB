@@ -30,12 +30,8 @@ class AppointmentsController extends Controller
             'total' => 'required',
             'serviceTax' => 'required',
             'grand_total' => 'required',
-            'pay_method' => 'required',
-            'paid' => 'required',
             'save_date' => 'required',
             'slot' => 'required',
-            'wallet_used' => 'required',
-            'wallet_price' => 'required',
             'notes' => 'required',
             'status' => 'required',
         ]);
