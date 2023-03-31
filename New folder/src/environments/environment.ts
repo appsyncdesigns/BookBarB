@@ -8,6 +8,6 @@
 */
 export const environment = {
   production: false,
-  baseUrl: 'https://appsyncdesigns.com/api/',
+  baseUrl: 'https://appsyncdesigns.github.io/BookBarB',
   imageUrl: 'https://appsyncdesigns.com/api/images/',
 };
