@@ -10,6 +10,7 @@ use DB;
 
 class CitiesController extends Controller
 {
+    
     public function save(Request $request){
         $validator = Validator::make($request->all(), [
             'name' => 'required',

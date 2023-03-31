@@ -90,7 +90,7 @@ Route::prefix('/v1')->group(function () {
         Route::post('cities/importData', [CitiesController::class, 'importData']);
         // Cities Routes
         Route::get('cities/getAll', [CitiesController::class, 'getAll']);
-        Route::post('cities/create', [CitiesController::class, 'save']);
+        Route::post('cities/create', [CitiesController::class, 'save'])->middleware("cors");
         Route::post('cities/update', [CitiesController::class, 'update']);
         Route::post('cities/destroy', [CitiesController::class, 'delete']);
         Route::post('cities/getById', [CitiesController::class, 'getById']);
