@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
     // iconSet singleton
     iconSetService.icons = { ...brandSet, ...flagSet, ...freeSet };
 
-    this.http.get('http://locahost/Laravel/PROJECTNAME/public/api/get-data').subscribe(data => {
+    this.http.get('https://appsyncdesigns.github.io/BookBarB').subscribe(data => {
         this.data = data;
         console.log("Data is coming.");
        
