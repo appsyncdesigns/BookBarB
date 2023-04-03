@@ -193,6 +193,7 @@ class SalonController extends Controller
         ->having('distance', '<', (int)$searchQuery->allowDistance)
         ->orderBy('distance')
         ->where(['salon.status'=>1,'salon.in_home'=>1])
+        ->whereIn('salon.uid', $timeslots)
         ->get();
 
         $freelancer = Individual::select(DB::raw('individual.id as id,individual.uid as uid,individual.lat as lat,individual.lng as lng, ( '.$values.' * acos( cos( radians('.$request->lat.') ) * cos( radians( lat ) ) * cos( radians( lng ) - radians('.$request->lng.') ) + sin( radians('.$request->lat.') ) * sin( radians( lat ) ) ) ) AS distance'))
