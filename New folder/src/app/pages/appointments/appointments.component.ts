@@ -54,7 +54,7 @@ export class AppointmentsComponent implements OnInit {
   getAll() {
     this.list = [];
     this.dummy = Array(5);
-    this.api.get_private('v1/appoinments/getAllSalonAppointments').then((data: any) => {
+    this.api.get_private('v1/appointments/getAllSalonAppointments').then((data: any) => {
       console.log(">>>>>", data);
       this.dummy = [];
       if (data && data.status && data.status == 200 && data.success) {
