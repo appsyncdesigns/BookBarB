@@ -89,7 +89,7 @@ export class AppointmentsDetailsComponent implements OnInit {
 
   getData() {
     this.loaded = false;
-    this.api.post_private('v1/appoinments/getInfoAdmin', { id: this.id }).then((data: any) => {
+    this.api.post_private('v1/appointments/getInfoAdmin', { id: this.id }).then((data: any) => {
       console.log(data);
       this.loaded = true;
       if (data && data.status && data.status == 200 && data.data && data.data.id) {
