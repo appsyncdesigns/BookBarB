@@ -332,7 +332,7 @@ export class FreelancerComponent implements OnInit {
     this.lat = '';
     this.lng = '';
     this.about = '';
-    this.cover = '';
+    this.covers = '';
     this.fee_start = '';
     this.rate = '';
     this.have_shop = false;
@@ -476,7 +476,7 @@ export class FreelancerComponent implements OnInit {
         this.lat = data.data.lat;
         this.lng = data.data.lng;
         this.about = data.data.about;
-        this.cover = data.data.cover;
+        this.covers = data.data.covers;
         this.address = data.data.address;
         this.have_shop = data.data.have_shop;
         this.fee_start = data.data.fee_start;
@@ -541,7 +541,7 @@ export class FreelancerComponent implements OnInit {
       id: this.individualId,
       lat: this.lat,
       lng: this.lng,
-      cover: this.cover,
+      cover: this.covers,
       categories: ids.join(),
       address: this.address,
       about: this.about,
