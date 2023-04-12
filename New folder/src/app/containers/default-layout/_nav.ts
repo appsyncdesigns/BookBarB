@@ -56,33 +56,33 @@ export const navItems: INavData[] = [
       }
     ]
   },
-  // {
-  //   name: 'Freelancer',
-  //   url: '/freelancer',
-  //   iconComponent: { name: 'cil-walk' },
-  //   children: [
-  //     {
-  //       name: 'Freelancers',
-  //       url: '/freelancer',
-  //       iconComponent: { name: 'cil-walk' },
-  //     },
-  //     {
-  //       name: 'Appointments',
-  //       url: '/freelancer-appointments',
-  //       iconComponent: { name: 'cil-calendar' },
-  //     },
-  //     {
-  //       name: 'Joining Request',
-  //       url: '/freelancer-request',
-  //       iconComponent: { name: 'cil-face' }
-  //     },
-  //     {
-  //       name: 'Freelancer Stats',
-  //       url: '/freelancer-stats',
-  //       iconComponent: { name: 'cil-chart-line' }
-  //     }
-  //   ]
-  // },
+  {
+    name: 'Freelancer',
+    url: '/freelancer',
+    iconComponent: { name: 'cil-walk' },
+    children: [
+      {
+        name: 'Freelancers',
+        url: '/freelancer',
+        iconComponent: { name: 'cil-walk' },
+      },
+      {
+        name: 'Appointments',
+        url: '/freelancer-appointments',
+        iconComponent: { name: 'cil-calendar' },
+      },
+      {
+        name: 'Joining Request',
+        url: '/freelancer-request',
+        iconComponent: { name: 'cil-face' }
+      },
+      {
+        name: 'Freelancer Stats',
+        url: '/freelancer-stats',
+        iconComponent: { name: 'cil-chart-line' }
+      }
+    ]
+  },
   // {
   //   name: 'Shop',
   //   url: '/product-category',
