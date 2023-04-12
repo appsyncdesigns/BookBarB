@@ -108,8 +108,8 @@ export class FreelancerComponent implements OnInit {
       this.api.uploadFile(files).subscribe((data: any) => {
         console.log('==>>>>>>', data.data);
         this.util.hide();
-        if (data && data.data.image_name) {
-          this.cover = data.data.image_name;
+        if (data && data.data) {
+          this.cover = data.data;
         }
       }, err => {
         console.log(err);
