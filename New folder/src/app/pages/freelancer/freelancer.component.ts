@@ -28,6 +28,7 @@ export class FreelancerComponent implements OnInit {
   gender: any = '1';
   fee_start: any = '';
   cover: any = '';
+  covers: any = '';
   categories: any[] = [];
   selectedItems = [];
   cities: any[] = [];
@@ -110,7 +111,7 @@ export class FreelancerComponent implements OnInit {
         console.log('==>>>>>>', data.data);
         this.util.hide();
         if (data && data.data) {
-          this.cover = data.data;
+          this.covers = data.data;
         }
       }, err => {
         console.log(err);
