@@ -277,7 +277,7 @@ export class FreelancerComponent implements OnInit {
       status: 1,
       lat: this.lat,
       lng: this.lng,
-      cover: this.cover,
+      cover: this.covers,
       categories: ids.join(),
       address: this.address,
       about: this.about,
