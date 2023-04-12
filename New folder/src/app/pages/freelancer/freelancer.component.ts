@@ -93,6 +93,7 @@ export class FreelancerComponent implements OnInit {
   }
 
   preview_banner(files: any) {
+    console.log('hii');
     console.log('fle', files);
     if (files.length == 0) {
       return;
