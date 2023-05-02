@@ -27,7 +27,7 @@ export class FreelancerComponent implements OnInit {
   mobile: any = '';
   gender: any = '1';
   fee_start: any = '';
-  // cover: any = '';
+  cover: any = '';
   covers: any = '';
   categories: any[] = [];
   selectedItems = [];
