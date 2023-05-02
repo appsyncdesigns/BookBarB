@@ -186,7 +186,7 @@ export class FreelancerComponent implements OnInit {
     console.log(this.zipcode);
     console.log(this.lat);
     console.log(this.lng);
-    console.log(this.cover);
+    console.log(this.covers);
     console.log(this.have_shop);
 
     if (this.firstName == '' || this.lastName == '' || this.email == '' || this.rate == ''
