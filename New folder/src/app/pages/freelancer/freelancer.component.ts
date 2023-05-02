@@ -28,7 +28,6 @@ export class FreelancerComponent implements OnInit {
   gender: any = '1';
   fee_start: any = '';
   cover: any = '';
-  covers: any = '';
   categories: any[] = [];
   selectedItems = [];
   cities: any[] = [];
@@ -94,7 +93,6 @@ export class FreelancerComponent implements OnInit {
   }
 
   preview_banner(files: any) {
-    console.log('hii');
     console.log('fle', files);
     if (files.length == 0) {
       return;
@@ -110,8 +108,8 @@ export class FreelancerComponent implements OnInit {
       this.api.uploadFile(files).subscribe((data: any) => {
         console.log('==>>>>>>', data.data);
         this.util.hide();
-        if (data && data.data) {
-          this.covers = data.data;
+        if (data && data.data.image_name) {
+          this.cover = data.data.image_name;
         }
       }, err => {
         console.log(err);
@@ -186,14 +184,14 @@ export class FreelancerComponent implements OnInit {
     console.log(this.zipcode);
     console.log(this.lat);
     console.log(this.lng);
-    console.log(this.covers);
+    console.log(this.cover);
     console.log(this.have_shop);
 
     if (this.firstName == '' || this.lastName == '' || this.email == '' || this.rate == ''
       || this.password == '' || this.country_code == '' || this.mobile == ''
       || this.selectedItems.length <= 0 || this.cityID == ''
       || this.zipcode == '' || this.lat == '' || this.lng == '' || this.about == '' || this.address == ''
-      || this.mobile == null || this.covers == '' || this.fee_start == '' || this.fee_start == null) {
+      || this.mobile == null || this.cover == '' || this.fee_start == '' || this.fee_start == null) {
       this.util.error(this.util.translate('All Fields are required'));
       return false;
     }
@@ -213,7 +211,7 @@ export class FreelancerComponent implements OnInit {
       first_name: this.firstName,
       last_name: this.lastName,
       gender: this.gender,
-      cover: this.covers,
+      cover: this.cover,
       mobile: this.mobile,
       email: this.email,
       country_code: this.country_code,
@@ -277,7 +275,7 @@ export class FreelancerComponent implements OnInit {
       status: 1,
       lat: this.lat,
       lng: this.lng,
-      cover: this.covers,
+      cover: this.cover,
       categories: ids.join(),
       address: this.address,
       about: this.about,
@@ -332,7 +330,7 @@ export class FreelancerComponent implements OnInit {
     this.lat = '';
     this.lng = '';
     this.about = '';
-    this.covers = '';
+    this.cover = '';
     this.fee_start = '';
     this.rate = '';
     this.have_shop = false;
@@ -476,7 +474,7 @@ export class FreelancerComponent implements OnInit {
         this.lat = data.data.lat;
         this.lng = data.data.lng;
         this.about = data.data.about;
-        this.covers = data.data.covers;
+        this.cover = data.data.cover;
         this.address = data.data.address;
         this.have_shop = data.data.have_shop;
         this.fee_start = data.data.fee_start;
@@ -531,7 +529,7 @@ export class FreelancerComponent implements OnInit {
   }
 
   updateSalon() {
-    if (this.covers == '' || this.address == '' || this.about == '' || this.rate == '' || this.cityID == '' || this.zipcode == '' || this.lat == '' || this.lng == '' || this.fee_start == '' || this.fee_start == null) {
+    if (this.cover == '' || this.address == '' || this.about == '' || this.rate == '' || this.cityID == '' || this.zipcode == '' || this.lat == '' || this.lng == '' || this.fee_start == '' || this.fee_start == null) {
       this.util.error(this.util.translate('All Fields are required'));
       return false;
     }
@@ -541,7 +539,7 @@ export class FreelancerComponent implements OnInit {
       id: this.individualId,
       lat: this.lat,
       lng: this.lng,
-      cover: this.covers,
+      cover: this.cover,
       categories: ids.join(),
       address: this.address,
       about: this.about,
