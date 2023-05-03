@@ -56,65 +56,65 @@ export const navItems: INavData[] = [
       }
     ]
   },
-  // {
-  //   name: 'Freelancer',
-  //   url: '/freelancer',
-  //   iconComponent: { name: 'cil-walk' },
-  //   children: [
-  //     {
-  //       name: 'Freelancers',
-  //       url: '/freelancer',
-  //       iconComponent: { name: 'cil-walk' },
-  //     },
-  //     {
-  //       name: 'Appointments',
-  //       url: '/freelancer-appointments',
-  //       iconComponent: { name: 'cil-calendar' },
-  //     },
-  //     {
-  //       name: 'Joining Request',
-  //       url: '/freelancer-request',
-  //       iconComponent: { name: 'cil-face' }
-  //     },
-  //     {
-  //       name: 'Freelancer Stats',
-  //       url: '/freelancer-stats',
-  //       iconComponent: { name: 'cil-chart-line' }
-  //     }
-  //   ]
-  // },
-  // {
-  //   name: 'Shop',
-  //   url: '/product-category',
-  //   iconComponent: { name: 'cil-puzzle' },
-  //   children: [
-  //     {
-  //       name: 'Categories',
-  //       url: '/product-category',
-  //       iconComponent: { name: 'cil-notes' }
-  //     },
-  //     {
-  //       name: 'Sub Categories',
-  //       url: '/product-sub-category',
-  //       iconComponent: { name: 'cil-clear-all' }
-  //     },
-  //     {
-  //       name: 'Products',
-  //       url: '/products',
-  //       iconComponent: { name: 'cil-paint' }
-  //     },
-  //     {
-  //       name: 'Orders',
-  //       url: '/orders',
-  //       iconComponent: { name: 'cil-cart' },
-  //     },
-  //     {
-  //       name: 'Orders Stats',
-  //       url: '/product-stats',
-  //       iconComponent: { name: 'cil-chart-line' }
-  //     }
-  //   ]
-  // },
+  {
+    name: 'Freelancer',
+    url: '/freelancer',
+    iconComponent: { name: 'cil-walk' },
+    children: [
+      {
+        name: 'Freelancers',
+        url: '/freelancer',
+        iconComponent: { name: 'cil-walk' },
+      },
+      {
+        name: 'Appointments',
+        url: '/freelancer-appointments',
+        iconComponent: { name: 'cil-calendar' },
+      },
+      {
+        name: 'Joining Request',
+        url: '/freelancer-request',
+        iconComponent: { name: 'cil-face' }
+      },
+      {
+        name: 'Freelancer Stats',
+        url: '/freelancer-stats',
+        iconComponent: { name: 'cil-chart-line' }
+      }
+    ]
+  },
+  {
+    name: 'Shop',
+    url: '/product-category',
+    iconComponent: { name: 'cil-puzzle' },
+    children: [
+      {
+        name: 'Categories',
+        url: '/product-category',
+        iconComponent: { name: 'cil-notes' }
+      },
+      {
+        name: 'Sub Categories',
+        url: '/product-sub-category',
+        iconComponent: { name: 'cil-clear-all' }
+      },
+      {
+        name: 'Products',
+        url: '/products',
+        iconComponent: { name: 'cil-paint' }
+      },
+      {
+        name: 'Orders',
+        url: '/orders',
+        iconComponent: { name: 'cil-cart' },
+      },
+      {
+        name: 'Orders Stats',
+        url: '/product-stats',
+        iconComponent: { name: 'cil-chart-line' }
+      }
+    ]
+  },
   {
     name: 'Users',
     url: '/users',
@@ -150,11 +150,11 @@ export const navItems: INavData[] = [
     url: '/complaints',
     iconComponent: { name: 'cil-volume-high' }
   },
-  // {
-  //   name: 'Payments',
-  //   url: '/payments',
-  //   iconComponent: { name: 'cil-credit-card' }
-  // },
+  {
+    name: 'Payments',
+    url: '/payments',
+    iconComponent: { name: 'cil-credit-card' }
+  },
   {
     name: 'Address',
     url: '/address',
