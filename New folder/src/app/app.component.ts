@@ -15,16 +15,13 @@ import { Title } from '@angular/platform-browser';
 import { ApiService } from './services/api.service';
 import { UtilService } from './services/util.service';
 import { TranslateService } from '@ngx-translate/core';
-import { HttpClient} from '@angular/common/http';
-
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'body',
   template: '<router-outlet></router-outlet>',
 })
 export class AppComponent implements OnInit {
-  title = 'Ultimate Salon';
-  data: any;
+  title = 'BookBarB';
 
   constructor(
     private router: Router,
@@ -33,19 +30,11 @@ export class AppComponent implements OnInit {
     private api: ApiService,
     public util: UtilService,
     private translate: TranslateService,
-    private http: HttpClient
   ) {
     titleService.setTitle(this.title);
 
     // iconSet singleton
     iconSetService.icons = { ...brandSet, ...flagSet, ...freeSet };
-
-    this.http.get('https://appsyncdesigns.github.io/BookBarB').subscribe(data => {
-        this.data = data;
-        console.log("Data is coming.");
-       
-        }, error => console.error(error));
-   
     this.api.get_public('v1/settings/getDefault').then((data: any) => {
       console.log('by default', data);
       if (data && data.status && data.status == 200) {
