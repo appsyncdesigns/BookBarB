@@ -18,7 +18,6 @@ class CreateCitiesTable extends Migration
             $table->string('name');
             $table->string('lat');
             $table->string('lng');
-            $table->string('email');
             $table->text('extra_field')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->timestamps();

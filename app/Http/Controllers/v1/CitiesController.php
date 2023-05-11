@@ -11,12 +11,11 @@ use DB;
 class CitiesController extends Controller
 { 
     public function save(Request $request){
-        dd($request->all());
+        
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'lat' => 'required',
-            'lng' => 'required',
-            'email' => 'required'
+            'lng' => 'required'
         ]);
         if ($validator->fails()) {
             $response = [
