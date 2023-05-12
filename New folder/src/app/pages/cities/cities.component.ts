@@ -203,14 +203,82 @@ export class CitiesComponent implements OnInit {
        this.email == '' || this.email == null ||
        this.password == '' || this.password == null) {
       this.util.error(this.util.translate('All Fields are required'));
-    } else {
+    } 
+    
+    const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+      if (!regex.test(this.email)) {
+        this.util.error(this.util.translate('Please enter valid Email ID'));
+        return false;
+      }
+
+      const param = {
+        first_name: 'city',
+        last_name: 'name',
+        gender: 'NA',
+        cover: 'NA',
+        mobile: 'NA',
+        email: this.email,
+        country_code: '+91',
+        password: this.password
+      };
+      this.util.show();
+      this.api.post_private('v1/auth/createCityAccount', param).then((data: any) => {
+        this.util.hide();
+        console.log(data);
+        if (data.status == 500) {
+          this.util.error(data.message);
+        }
+        if (data && data.status && data.status == 200 && data.user && data.user.id) {
+          console.log(data);
+          this.savecityInfo(data.user.id);
+        } else if (data && data.error && data.error.msg) {
+          this.util.error(data.error.msg);
+        } else if (data && data.error && data.error.message == 'Validation Error.') {
+          for (let key in data.error[0]) {
+            console.log(data.error[0][key][0]);
+            this.util.error(data.error[0][key][0]);
+          }
+        } else {
+          this.util.error(this.util.translate('Something went wrong'));
+        }
+      }, error => {
+        console.log(error);
+        this.util.hide();
+        if (error && error.error && error.error.status == 500 && error.error.message) {
+          this.util.error(error.error.message);
+        } else if (error && error.error && error.error.error && error.error.status == 422) {
+          for (let key in error.error.error) {
+            console.log(error.error.error[key][0]);
+            this.util.error(error.error.error[key][0]);
+          }
+        } else {
+          this.util.error(this.util.translate('Something went wrong'));
+        }
+      }).catch(error => {
+        console.log(error);
+        this.util.hide();
+        if (error && error.error && error.error.status == 500 && error.error.message) {
+          this.util.error(error.error.message);
+        } else if (error && error.error && error.error.error && error.error.status == 422) {
+          for (let key in error.error.error) {
+            console.log(error.error.error[key][0]);
+            this.util.error(error.error.error[key][0]);
+          }
+        } else {
+          this.util.error(this.util.translate('Something went wrong'));
+        }
+      });
+
+
+  }
+
+  savecityInfo(uid: any){
       const body = {
+        uid: uid,
         name: this.name,
         status: 1,
         lat: this.lat,
-        lng: this.lng,
-        email: this.email,
-        password: this.password
+        lng: this.lng
       };
       this.util.show();
       this.api.post_private('v1/cities/create', body).then((data: any) => {
@@ -231,7 +299,6 @@ export class CitiesComponent implements OnInit {
         this.util.apiErrorHandler(error);
       });
     }
-  }
 
   updateCity() {
     if (this.name == '' || this.name == null ||
