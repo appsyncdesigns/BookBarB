@@ -214,7 +214,7 @@ export class CitiesComponent implements OnInit {
       const param = {
         first_name: 'city',
         last_name: 'name',
-        gender: 'NA',
+        gender: '1',
         cover: 'NA',
         mobile: 'NA',
         email: this.email,
