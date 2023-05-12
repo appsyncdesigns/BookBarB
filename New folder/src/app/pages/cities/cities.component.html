@@ -46,6 +46,11 @@
                             <input type="email" [(ngModel)]="email" class="form-control"
                                 [placeholder]="util.translate('Email ID')" [ngModelOptions]="{standalone: true}">
                         </div>
+                        <div class="form-group">
+                            <label class="modal_lbl">{{util.translate('Password')}}</label>
+                            <input type="password" [(ngModel)]="password" class="form-control"
+                                [placeholder]="util.translate('Password')" [ngModelOptions]="{standalone: true}">
+                        </div>
                         
                     </form>
 

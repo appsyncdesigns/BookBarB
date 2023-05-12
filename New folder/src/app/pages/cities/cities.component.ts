@@ -26,6 +26,7 @@ export class CitiesComponent implements OnInit {
   lat: any = '';
   lng: any = '';
   email: any = '';
+  password: any = '';
   page: number = 1;
   constructor(
     public api: ApiService,
@@ -192,13 +193,15 @@ export class CitiesComponent implements OnInit {
     this.lat = '';
     this.lng = '';
     this.email = '';
+    this.password = '';
   }
 
 
   createCity() {
     if (this.name == '' || this.name == null ||
       this.lat == '' || this.lng == '' || this.lat == null || this.lng == null ||
-       this.email == '' || this.email == null) {
+       this.email == '' || this.email == null ||
+       this.password == '' || this.password == null) {
       this.util.error(this.util.translate('All Fields are required'));
     } else {
       const body = {
@@ -206,7 +209,8 @@ export class CitiesComponent implements OnInit {
         status: 1,
         lat: this.lat,
         lng: this.lng,
-        email: this.email
+        email: this.email,
+        password: this.password
       };
       this.util.show();
       this.api.post_private('v1/cities/create', body).then((data: any) => {
