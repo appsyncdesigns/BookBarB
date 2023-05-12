@@ -49,7 +49,7 @@ export class LoginComponent {
     this.api.post('v1/auth/adminLogin', param).then((data: any) => {
       console.log("+++++++++++++++", data);
       this.util.hide();
-      if (data && data.status && data.status == 200 && data.user && data.user.type == 'admin') {
+      if (data && data.status && data.status == 200 && data.user && data.user.type == 'admin' || data.user.type == 'city') {
         localStorage.setItem('uid', data.user.id);
         localStorage.setItem('token', data.token);
         this.router.navigate(['']);
