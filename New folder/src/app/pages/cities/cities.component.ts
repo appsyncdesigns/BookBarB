@@ -273,6 +273,7 @@ export class CitiesComponent implements OnInit {
   }
 
   savecityInfo(uid: any){
+    console.log('uid', uid);
       const body = {
         uid: uid,
         name: this.name,
