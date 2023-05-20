@@ -52,6 +52,7 @@ export class LoginComponent {
       if (data && data.status && data.status == 200 && data.user && data.user.type == 'admin' || data.user.type == 'city') {
         localStorage.setItem('uid', data.user.id);
         localStorage.setItem('token', data.token);
+        localStorage.setItem('type', data.user.type);
         this.router.navigate(['']);
       } else if (data && data.status == 401 && data.error.error) {
         this.util.error(data.error.error);

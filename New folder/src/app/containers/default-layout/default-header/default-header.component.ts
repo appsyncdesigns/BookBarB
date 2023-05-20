@@ -40,6 +40,7 @@ export class DefaultHeaderComponent extends HeaderComponent {
       console.log(data);
       localStorage.removeItem('uid');
       localStorage.removeItem('token');
+      localStorage.removeItem('type');
       this.router.navigateByUrl('/login');
     }, error => {
       this.util.hide();

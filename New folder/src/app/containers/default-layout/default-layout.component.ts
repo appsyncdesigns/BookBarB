@@ -29,12 +29,14 @@ export class DefaultLayoutComponent {
     setTimeout(() => {
       // navItems.filter(x => x.name = this.util.translate(x.name));
       navItems.forEach((x) => {
+         
         x.name = this.util.translate(x.name);
         x.children?.forEach((sub) => {
           sub.name = this.util.translate(sub.name);
         });
       });
       this.navItems = navItems;
+
     }, 2000);
 
   }
