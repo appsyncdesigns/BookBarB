@@ -45,8 +45,8 @@ export class DefaultLayoutComponent {
         
             }, 2000);
     }
-    else if(this.loginType=='city'){
-
+    else if(this.loginType=='admin'){
+      this.loginType = localStorage.getItem('type');
           setTimeout(() => {
             // navItems.filter(x => x.name = this.util.translate(x.name));
             navItems.forEach((x) => {
