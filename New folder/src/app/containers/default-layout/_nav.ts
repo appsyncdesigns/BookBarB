@@ -8,26 +8,11 @@
 */
 import { INavData } from '@coreui/angular';
 
-export const navItems: INavData[] = [
+export const subNavItems: INavData[] =[
   {
     name: 'Dashboard',
     url: '/dashboard',
     iconComponent: { name: 'cil-speedometer' }
-  },
-  {
-    name: 'Categories',
-    url: '/categories',
-    iconComponent: { name: 'cil-grid' }
-  },
-  {
-    name: 'Cities',
-    url: '/cities',
-    iconComponent: { name: 'cil-location-pin' }
-  },
-  {
-    name: 'Banners',
-    url: '/banners',
-    iconComponent: { name: 'cil-spreadsheet' }
   },
   {
     name: 'Salons',
@@ -56,6 +41,56 @@ export const navItems: INavData[] = [
       }
     ]
   },
+]
+
+export const navItems: INavData[] = [
+  {
+    name: 'Dashboard',
+    url: '/dashboard',
+    iconComponent: { name: 'cil-speedometer' }
+  },
+  {
+    name: 'Categories',
+    url: '/categories',
+    iconComponent: { name: 'cil-grid' }
+  },
+  {
+    name: 'Cities',
+    url: '/cities',
+    iconComponent: { name: 'cil-location-pin' }
+  },
+  {
+    name: 'Banners',
+    url: '/banners',
+    iconComponent: { name: 'cil-spreadsheet' }
+  },
+  // {
+  //   name: 'Salons',
+  //   url: '/salons',
+  //   iconComponent: { name: 'cil-bank' },
+  //   children: [
+  //     {
+  //       name: 'Salons',
+  //       url: '/salons',
+  //       iconComponent: { name: 'cil-bank' }
+  //     },
+  //     {
+  //       name: 'Appointments',
+  //       url: '/appointments',
+  //       iconComponent: { name: 'cil-calendar' },
+  //     },
+  //     {
+  //       name: 'Joining Request',
+  //       url: '/salon-request',
+  //       iconComponent: { name: 'cil-face' }
+  //     },
+  //     {
+  //       name: 'Salon Stats',
+  //       url: '/salon-stats',
+  //       iconComponent: { name: 'cil-chart-line' }
+  //     }
+  //   ]
+  // },
   // {
   //   name: 'Freelancer',
   //   url: '/freelancer',
