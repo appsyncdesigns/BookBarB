@@ -45,7 +45,7 @@ export class DefaultLayoutComponent {
         
             }, 2000);
     }
-    else if(this.loginType=='admin'){
+    else if(this.loginType=='city'){
 
           setTimeout(() => {
             // navItems.filter(x => x.name = this.util.translate(x.name));
