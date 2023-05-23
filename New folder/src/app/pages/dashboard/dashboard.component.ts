@@ -181,7 +181,7 @@ export class DashboardComponent implements OnInit {
           }
         });
         this.productsOrders = data.productsOrders;
-        this.total_appointments = localStorage.getItem('type');
+        this.total_appointments = data.total_appointments;
         this.total_appointments_freelancer = data.total_appointments_freelancer;
         this.total_freelancers = data.total_freelancers;
         this.total_orders = data.total_orders;
