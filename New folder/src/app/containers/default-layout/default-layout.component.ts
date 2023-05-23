@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 import { UtilService } from 'src/app/services/util.service';
 import { INavData } from '@coreui/angular';
 import { navItems } from './_nav';
-import { subNavItems } from './_nav';
+import { subNavItems } from './_subnav';
 
 @Component({
   selector: 'app-dashboard',
