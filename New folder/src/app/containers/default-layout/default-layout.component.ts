@@ -21,7 +21,7 @@ export class DefaultLayoutComponent {
   public navItems: INavData[] = [];
   public subNavItems: INavData[] = [];
   loginType: any = '';
-  city: any = '';
+  city = 'city';
 
   public perfectScrollbarConfig = {
     suppressScrollX: true,
