@@ -47,6 +47,7 @@ export class DefaultLayoutComponent {
     }
     else if(this.loginType=='admin'){
       this.loginType = localStorage.getItem('type');
+      console.log(this.loginType);
           setTimeout(() => {
             // navItems.filter(x => x.name = this.util.translate(x.name));
             navItems.forEach((x) => {
