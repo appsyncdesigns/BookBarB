@@ -32,6 +32,7 @@ export class DefaultLayoutComponent {
   ) {
     
     this.loginType = localStorage.getItem('type');
+    this.city = 'city';
     
     if(this.loginType=='city'){
             setTimeout(() => {
