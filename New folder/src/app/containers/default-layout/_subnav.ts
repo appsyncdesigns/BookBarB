@@ -14,48 +14,48 @@ export const subNavItems: INavData[] = [
     url: '/dashboard',
     iconComponent: { name: 'cil-speedometer' }
   },
+//   {
+//     name: 'Categories',
+//     url: '/categories',
+//     iconComponent: { name: 'cil-grid' }
+//   },
+//   {
+//     name: 'Cities',
+//     url: '/cities',
+//     iconComponent: { name: 'cil-location-pin' }
+//   },
+//   {
+//     name: 'Banners',
+//     url: '/banners',
+//     iconComponent: { name: 'cil-spreadsheet' }
+//   },
   {
-    name: 'Categories',
-    url: '/categories',
-    iconComponent: { name: 'cil-grid' }
+    name: 'Salons',
+    url: '/salons',
+    iconComponent: { name: 'cil-bank' },
+    children: [
+      {
+        name: 'Salons',
+        url: '/salons',
+        iconComponent: { name: 'cil-bank' }
+      },
+      {
+        name: 'Appointments',
+        url: '/appointments',
+        iconComponent: { name: 'cil-calendar' },
+      },
+      {
+        name: 'Joining Request',
+        url: '/salon-request',
+        iconComponent: { name: 'cil-face' }
+      },
+      {
+        name: 'Salon Stats',
+        url: '/salon-stats',
+        iconComponent: { name: 'cil-chart-line' }
+      }
+    ]
   },
-  {
-    name: 'Cities',
-    url: '/cities',
-    iconComponent: { name: 'cil-location-pin' }
-  },
-  {
-    name: 'Banners',
-    url: '/banners',
-    iconComponent: { name: 'cil-spreadsheet' }
-  },
-  // {
-  //   name: 'Salons',
-  //   url: '/salons',
-  //   iconComponent: { name: 'cil-bank' },
-  //   children: [
-  //     {
-  //       name: 'Salons',
-  //       url: '/salons',
-  //       iconComponent: { name: 'cil-bank' }
-  //     },
-  //     {
-  //       name: 'Appointments',
-  //       url: '/appointments',
-  //       iconComponent: { name: 'cil-calendar' },
-  //     },
-  //     {
-  //       name: 'Joining Request',
-  //       url: '/salon-request',
-  //       iconComponent: { name: 'cil-face' }
-  //     },
-  //     {
-  //       name: 'Salon Stats',
-  //       url: '/salon-stats',
-  //       iconComponent: { name: 'cil-chart-line' }
-  //     }
-  //   ]
-  // },
   // {
   //   name: 'Freelancer',
   //   url: '/freelancer',
@@ -83,38 +83,38 @@ export const subNavItems: INavData[] = [
   //     }
   //   ]
   // },
-  {
-    name: 'Shop',
-    url: '/product-category',
-    iconComponent: { name: 'cil-puzzle' },
-    children: [
-      {
-        name: 'Categories',
-        url: '/product-category',
-        iconComponent: { name: 'cil-notes' }
-      },
-      {
-        name: 'Sub Categories',
-        url: '/product-sub-category',
-        iconComponent: { name: 'cil-clear-all' }
-      },
-      {
-        name: 'Products',
-        url: '/products',
-        iconComponent: { name: 'cil-paint' }
-      },
-      {
-        name: 'Orders',
-        url: '/orders',
-        iconComponent: { name: 'cil-cart' },
-      },
-      {
-        name: 'Orders Stats',
-        url: '/product-stats',
-        iconComponent: { name: 'cil-chart-line' }
-      }
-    ]
-  },
+//   {
+//     name: 'Shop',
+//     url: '/product-category',
+//     iconComponent: { name: 'cil-puzzle' },
+//     children: [
+//       {
+//         name: 'Categories',
+//         url: '/product-category',
+//         iconComponent: { name: 'cil-notes' }
+//       },
+//       {
+//         name: 'Sub Categories',
+//         url: '/product-sub-category',
+//         iconComponent: { name: 'cil-clear-all' }
+//       },
+//       {
+//         name: 'Products',
+//         url: '/products',
+//         iconComponent: { name: 'cil-paint' }
+//       },
+//       {
+//         name: 'Orders',
+//         url: '/orders',
+//         iconComponent: { name: 'cil-cart' },
+//       },
+//       {
+//         name: 'Orders Stats',
+//         url: '/product-stats',
+//         iconComponent: { name: 'cil-chart-line' }
+//       }
+//     ]
+//   },
   {
     name: 'Users',
     url: '/users',
@@ -125,16 +125,16 @@ export const subNavItems: INavData[] = [
     url: '/offers',
     iconComponent: { name: 'cil-link' }
   },
-  {
-    name: 'App Pages',
-    url: '/app-pages',
-    iconComponent: { name: 'cil-description' }
-  },
-  {
-    name: 'Blogs',
-    url: '/blogs',
-    iconComponent: { name: 'cil-inbox' }
-  },
+//   {
+//     name: 'App Pages',
+//     url: '/app-pages',
+//     iconComponent: { name: 'cil-description' }
+//   },
+//   {
+//     name: 'Blogs',
+//     url: '/blogs',
+//     iconComponent: { name: 'cil-inbox' }
+//   },
   {
     name: 'Referral',
     url: '/referral',
