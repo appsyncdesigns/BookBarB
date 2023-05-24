@@ -10,7 +10,6 @@ import { Component } from '@angular/core';
 import { UtilService } from 'src/app/services/util.service';
 import { INavData } from '@coreui/angular';
 import { navItems } from './_nav';
-import { subNavItems } from './_subnav';
 
 @Component({
   selector: 'app-dashboard',
@@ -19,9 +18,6 @@ import { subNavItems } from './_subnav';
 export class DefaultLayoutComponent {
 
   public navItems: INavData[] = [];
-  public subNavItems: INavData[] = [];
-  loginType: any = '';
-  
 
   public perfectScrollbarConfig = {
     suppressScrollX: true,
@@ -30,38 +26,16 @@ export class DefaultLayoutComponent {
   constructor(
     public util: UtilService
   ) {
-    
-    this.loginType = localStorage.getItem('type');
-   
-    
-    if(this.loginType=='city'){
-            setTimeout(() => {
-              // navItems.filter(x => x.name = this.util.translate(x.name));
-              subNavItems.forEach((x) => {
-                x.name = this.util.translate(x.name);
-                x.children?.forEach((sub) => {
-                  sub.name = this.util.translate(sub.name);
-                });
-              });
-              this.subNavItems = subNavItems;
-        
-            }, 2000);
-    }
-    else if(this.loginType=='admin'){
-      this.loginType = localStorage.getItem('type');
-      console.log(this.loginType);
-          setTimeout(() => {
-            // navItems.filter(x => x.name = this.util.translate(x.name));
-            navItems.forEach((x) => {
-              x.name = this.util.translate(x.name);
-              x.children?.forEach((sub) => {
-                sub.name = this.util.translate(sub.name);
-              });
-            });
-            this.navItems = navItems;
-
-          }, 2000);
-        }
+    setTimeout(() => {
+      // navItems.filter(x => x.name = this.util.translate(x.name));
+      navItems.forEach((x) => {
+        x.name = this.util.translate(x.name);
+        x.children?.forEach((sub) => {
+          sub.name = this.util.translate(sub.name);
+        });
+      });
+      this.navItems = navItems;
+    }, 2000);
 
   }
 }
