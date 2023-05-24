@@ -9,8 +9,7 @@
 import { Component } from '@angular/core';
 import { UtilService } from 'src/app/services/util.service';
 import { INavData } from '@coreui/angular';
-// import { navItems } from './_nav';
-import { subNavItems } from './_subnav';
+import { navItems } from './_nav';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,8 +17,7 @@ import { subNavItems } from './_subnav';
 })
 export class DefaultLayoutComponent {
 
-  // public navItems: INavData[] = [];
-  public subNavItems: INavData[] = [];
+  public navItems: INavData[] = [];
 
   public perfectScrollbarConfig = {
     suppressScrollX: true,
@@ -28,29 +26,16 @@ export class DefaultLayoutComponent {
   constructor(
     public util: UtilService
   ) {
-    // setTimeout(() => {
-    //   // navItems.filter(x => x.name = this.util.translate(x.name));
-    //   navItems.forEach((x) => {
-    //     x.name = this.util.translate(x.name);
-    //     x.children?.forEach((sub) => {
-    //       sub.name = this.util.translate(sub.name);
-    //     });
-    //   });
-    //   this.navItems = navItems;
-    // }, 2000);
-
-
     setTimeout(() => {
       // navItems.filter(x => x.name = this.util.translate(x.name));
-      subNavItems.forEach((x) => {
+      navItems.forEach((x) => {
         x.name = this.util.translate(x.name);
         x.children?.forEach((sub) => {
           sub.name = this.util.translate(sub.name);
         });
       });
-      this.subNavItems = subNavItems;
+      this.navItems = navItems;
     }, 2000);
-
 
   }
 }
