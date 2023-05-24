@@ -9,6 +9,7 @@
 import { Component } from '@angular/core';
 import { UtilService } from 'src/app/services/util.service';
 import { INavData } from '@coreui/angular';
+import { subNavItems } from './_subnav';
 import { navItems } from './_nav';
 
 @Component({
@@ -17,7 +18,9 @@ import { navItems } from './_nav';
 })
 export class DefaultLayoutComponent {
 
+  public subNavItems: INavData[] = [];
   public navItems: INavData[] = [];
+  loginType : any = '';
 
   public perfectScrollbarConfig = {
     suppressScrollX: true,
@@ -26,16 +29,32 @@ export class DefaultLayoutComponent {
   constructor(
     public util: UtilService
   ) {
-    setTimeout(() => {
-      // navItems.filter(x => x.name = this.util.translate(x.name));
-      navItems.forEach((x) => {
-        x.name = this.util.translate(x.name);
-        x.children?.forEach((sub) => {
-          sub.name = this.util.translate(sub.name);
-        });
-      });
-      this.navItems = navItems;
-    }, 2000);
+    this.loginType=localStorage.getItem('type');
+
+    if(this.loginType == 'city'){
+        setTimeout(() => {
+          // navItems.filter(x => x.name = this.util.translate(x.name));
+          subNavItems.forEach((x) => {
+            x.name = this.util.translate(x.name);
+            x.children?.forEach((sub) => {
+              sub.name = this.util.translate(sub.name);
+            });
+          });
+          this.subNavItems = subNavItems;
+        }, 2000);
+  }else if(this.loginType == 'admin'){
+
+        setTimeout(() => {
+          // navItems.filter(x => x.name = this.util.translate(x.name));
+          navItems.forEach((x) => {
+            x.name = this.util.translate(x.name);
+            x.children?.forEach((sub) => {
+              sub.name = this.util.translate(sub.name);
+            });
+          });
+          this.navItems = navItems;
+        }, 2000);
+  }
 
   }
 }
