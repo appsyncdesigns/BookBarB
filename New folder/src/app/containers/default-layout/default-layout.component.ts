@@ -33,7 +33,7 @@ export class DefaultLayoutComponent {
     this.loginType = localStorage.getItem('type');
    
     
-    if(this.loginType=='city'){
+    if(this.loginType=='admin'){
             setTimeout(() => {
               // navItems.filter(x => x.name = this.util.translate(x.name));
               subNavItems.forEach((x) => {
@@ -46,7 +46,7 @@ export class DefaultLayoutComponent {
         
             }, 2000);
     }
-    else if(this.loginType=='admin'){
+    else if(this.loginType=='city'){
       this.loginType = localStorage.getItem('type');
       console.log(this.loginType);
           setTimeout(() => {
