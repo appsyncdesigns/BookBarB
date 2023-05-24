@@ -21,6 +21,7 @@ export class DefaultLayoutComponent {
   public navItems: INavData[] = [];
   public subNavItems: INavData[] = [];
   loginType: any = '';
+  
 
   public perfectScrollbarConfig = {
     suppressScrollX: true,
@@ -33,7 +34,7 @@ export class DefaultLayoutComponent {
     this.loginType = localStorage.getItem('type');
    
     
-    if(this.loginType=='admin'){
+    if(this.loginType=='city'){
             setTimeout(() => {
               // navItems.filter(x => x.name = this.util.translate(x.name));
               subNavItems.forEach((x) => {
@@ -46,7 +47,7 @@ export class DefaultLayoutComponent {
         
             }, 2000);
     }
-    else if(this.loginType=='city'){
+    else if(this.loginType=='admin'){
       this.loginType = localStorage.getItem('type');
       console.log(this.loginType);
           setTimeout(() => {
