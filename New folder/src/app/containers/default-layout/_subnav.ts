@@ -14,21 +14,21 @@ export const subNavItems: INavData[] = [
     url: '/dashboard',
     iconComponent: { name: 'cil-speedometer' }
   },
-//   {
-//     name: 'Categories',
-//     url: '/categories',
-//     iconComponent: { name: 'cil-grid' }
-//   },
+  {
+    name: 'Categories',
+    url: '/categories',
+    iconComponent: { name: 'cil-grid' }
+  },
 //   {
 //     name: 'Cities',
 //     url: '/cities',
 //     iconComponent: { name: 'cil-location-pin' }
 //   },
-//   {
-//     name: 'Banners',
-//     url: '/banners',
-//     iconComponent: { name: 'cil-spreadsheet' }
-//   },
+  {
+    name: 'Banners',
+    url: '/banners',
+    iconComponent: { name: 'cil-spreadsheet' }
+  },
   {
     name: 'Salons',
     url: '/salons',
@@ -135,11 +135,11 @@ export const subNavItems: INavData[] = [
 //     url: '/blogs',
 //     iconComponent: { name: 'cil-inbox' }
 //   },
-  {
-    name: 'Referral',
-    url: '/referral',
-    iconComponent: { name: 'cil-tags' }
-  },
+  // {
+  //   name: 'Referral',
+  //   url: '/referral',
+  //   iconComponent: { name: 'cil-tags' }
+  // },
   {
     name: 'Supports',
     url: '/supports',
@@ -165,11 +165,11 @@ export const subNavItems: INavData[] = [
     url: '/contact-forms',
     iconComponent: { name: 'cil-address-book' }
   },
-  {
-    name: 'Administrator',
-    url: '/administrator',
-    iconComponent: { name: 'cil-line-weight' }
-  },
+  // {
+  //   name: 'Administrator',
+  //   url: '/administrator',
+  //   iconComponent: { name: 'cil-line-weight' }
+  // },
   {
     name: 'Notifications',
     url: '/notifications',
