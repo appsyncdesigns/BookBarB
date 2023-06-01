@@ -28,7 +28,6 @@ export class SalonsComponent implements OnInit {
   gender: any = '1';
   cover: any = '';
   categories: any[] = [];
-  usertypee: any[] = [];
   usertype: any[] = [];
   selectedItems = [];
   selectedUsertypes = [];
@@ -52,6 +51,15 @@ export class SalonsComponent implements OnInit {
     unSelectAllText: 'UnSelect All',
     allowSearchFilter: true
   };
+
+  dropdownSettings1 = {
+    singleSelection: false,
+    idField: 'id',
+    textField: 'type',
+    selectAllText: 'Select All',
+    unSelectAllText: 'UnSelect All',
+    allowSearchFilter: true
+  };
   salons: any[] = [];
   dummySalons: any[] = [];
 
@@ -70,14 +78,7 @@ export class SalonsComponent implements OnInit {
     this.getAllCities();
   }
 
-  ngOnInit() {
-    this.usertypee = [
-      { item_id: 1, item_text: 'Hanoi' },
-      { item_id: 2, item_text: 'Lang Son' },
-      { item_id: 3, item_text: 'Vung Tau' },
-      { item_id: 4, item_text: 'Hue' },
-      { item_id: 5, item_text: 'Cu Chi' },
-    ];
+  ngOnInit(): void {
   }
 
   getAllSalon() {
