@@ -203,6 +203,7 @@ export class SalonsComponent implements OnInit {
     console.log(this.country_code);
     console.log(this.mobile);
     console.log(this.selectedItems);
+    console.log(this.selectedUsertypes);
     console.log(this.cityID);
     console.log(this.zipcode);
     console.log(this.lat);
@@ -213,7 +214,7 @@ export class SalonsComponent implements OnInit {
     console.log(this.service_at_home);
     if (this.firstName == '' || this.lastName == '' || this.email == ''
       || this.password == '' || this.country_code == '' || this.mobile == ''
-      || this.selectedItems.length <= 0 || this.cityID == '' || this.rate == ''
+      || this.selectedItems.length <= 0 || this.selectedUsertypes.length <= 0 || this.cityID == '' || this.rate == ''
       || this.zipcode == '' || this.lat == '' || this.lng == '' || this.about == '' || this.address == ''
       || this.mobile == null || this.cover == '' || this.name == '') {
       this.util.error(this.util.translate('All Fields are required'));
@@ -293,6 +294,7 @@ export class SalonsComponent implements OnInit {
   saveSalonProfile(uid: any) {
     console.log('uid', uid);
     const ids = this.selectedItems.map((x: any) => x.id);
+    const uids = this.selectedUsertypes.map((x: any) => x.id);
     console.log(ids);
     const body = {
       uid: uid,
@@ -302,6 +304,7 @@ export class SalonsComponent implements OnInit {
       lng: this.lng,
       cover: this.cover,
       categories: ids.join(),
+      UserType: uids.join(),
       address: this.address,
       about: this.about,
       images: 'NA',
@@ -350,6 +353,7 @@ export class SalonsComponent implements OnInit {
     this.country_code = '';
     this.mobile = '';
     this.selectedItems = [];
+    this.selectedUsertypes = [];
     this.name = '';
     this.cityID = '';
     this.zipcode = '';
