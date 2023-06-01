@@ -367,6 +367,7 @@ export class SalonsComponent implements OnInit {
     this.selectedUsertypes = [];
     this.name = '';
     this.cityID = '';
+    this.address = '';
     this.zipcode = '';
     this.lat = '';
     this.lng = '';
