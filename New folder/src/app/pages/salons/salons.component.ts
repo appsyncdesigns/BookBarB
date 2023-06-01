@@ -201,6 +201,7 @@ export class SalonsComponent implements OnInit {
   createNew() {
     this.action = 'create';
     this.myModal2.show();
+    this.clearData();
   }
 
   createSalon() {
