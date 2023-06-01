@@ -64,6 +64,7 @@ export class SalonsComponent implements OnInit {
   ) {
     this.getAllSalon();
     this.getAllCates();
+    this.getAllUserTypes();
     this.getAllCities();
   }
 
@@ -130,6 +131,26 @@ export class SalonsComponent implements OnInit {
         if (data.data.length > 0) {
           this.categories = data.data;
           console.log("====", this.categories);
+        }
+      }
+    }, error => {
+      console.log('Error', error);
+      this.util.apiErrorHandler(error);
+    }).catch(error => {
+      console.log('Err', error);
+      this.util.apiErrorHandler(error);
+    });
+  }
+
+
+  getAllUserTypes() {
+    ///getAll
+    this.api.get_private('v1/salon/getAllUserTypes').then((data: any) => {
+      if (data && data.status && data.status == 200 && data.success) {
+        console.log(">>>>>", data);
+        if (data.data.length > 0) {
+          this.usertype = data.data;
+          console.log("====", this.usertype);
         }
       }
     }, error => {
