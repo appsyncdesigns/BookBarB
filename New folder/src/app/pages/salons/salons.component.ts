@@ -150,7 +150,7 @@ export class SalonsComponent implements OnInit {
       if (data && data.status && data.status == 200 && data.success) {
         console.log(">>>>>", data);
         if (data.data.length > 0) {
-          this.usertype = data.type;
+          this.usertype = data.data;
           console.log("====", this.usertype);
         }
       }
