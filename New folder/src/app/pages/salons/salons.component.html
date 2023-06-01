@@ -254,7 +254,7 @@
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <ng-multiselect-dropdown [placeholder]="util.translate('Top Category')"
-                                        maxHeight="100" [data]="categories" [(ngModel)]="selectedItems"
+                                        maxHeight="100" [data]="usertype" [(ngModel)]="selectedItems"
                                         [settings]="dropdownSettings">
                                     </ng-multiselect-dropdown>
                                 </div>
@@ -263,7 +263,7 @@
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <ng-multiselect-dropdown [placeholder]="util.translate('Salon User Type')"
-                                        maxHeight="100" [data]="usertype" [(ngModel)]="selectedUsertypes"
+                                        maxHeight="100" [data]="categories" [(ngModel)]="selectedUsertypes"
                                         [settings]="dropdownSettings">
                                     </ng-multiselect-dropdown>
                                 </div>
