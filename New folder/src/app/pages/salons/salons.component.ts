@@ -296,6 +296,7 @@ export class SalonsComponent implements OnInit {
     const ids = this.selectedItems.map((x: any) => x.id);
     const uids = this.selectedUsertypes.map((x: any) => x.id);
     console.log(ids);
+    console.log(uids);
     const body = {
       uid: uid,
       name: this.name,
