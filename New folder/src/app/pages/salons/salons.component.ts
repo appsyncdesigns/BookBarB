@@ -30,6 +30,7 @@ export class SalonsComponent implements OnInit {
   categories: any[] = [];
   usertype: any[] = [];
   selectedItems = [];
+  selectedUsertypes = [];
   cities: any[] = [];
   lat: any = '';
   name: any = '';
