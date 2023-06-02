@@ -563,6 +563,8 @@ export class SalonsComponent implements OnInit {
       this.util.hide();
       if (data && data.status && data.status == 200) {
         this.action = 'update';
+        this.firstName= data.data.fisrt_name;
+        this.lastName= data.data.last_name;
         this.selectedUsertypes = data.data.user_type_data;
         this.selectedItems = data.data.web_cates_data;
         this.cityID = data.data.cid;
