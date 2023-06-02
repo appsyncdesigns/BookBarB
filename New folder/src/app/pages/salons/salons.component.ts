@@ -563,6 +563,7 @@ export class SalonsComponent implements OnInit {
       this.util.hide();
       if (data && data.status && data.status == 200) {
         this.action = 'update';
+        this.selectedUsertypes = data.data.user_type_data;
         this.selectedItems = data.data.web_cates_data;
         this.cityID = data.data.cid;
         this.zipcode = data.data.zipcode;
@@ -632,6 +633,9 @@ export class SalonsComponent implements OnInit {
       return false;
     }
     const ids = this.selectedItems.map((x: any) => x.id);
+    const uids = this.selectedUsertypes.map((x: any) => x.id);
+    
+
     console.log(ids);
     const body = {
       id: this.salonId,
@@ -640,6 +644,7 @@ export class SalonsComponent implements OnInit {
       lng: this.lng,
       cover: this.cover,
       categories: ids.join(),
+      UserType: uids.join(),
       address: this.address,
       about: this.about,
       cid: this.cityID,
