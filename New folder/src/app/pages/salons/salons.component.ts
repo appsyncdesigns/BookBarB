@@ -572,6 +572,9 @@ export class SalonsComponent implements OnInit {
         this.about = data.data.about;
         this.cover = data.data.cover;
         this.name = data.data.name;
+        this.email = data.data.email;
+        this.mobile = data.data.mobile;
+        this.password = data.data.password;
         this.address = data.data.address;
         this.have_shop = data.data.have_shop;
         this.have_stylist = data.data.have_stylist;
@@ -640,6 +643,9 @@ export class SalonsComponent implements OnInit {
     const body = {
       id: this.salonId,
       name: this.name,
+      email: this.email,
+      mobile: this.mobile,
+      password: this.password,
       lat: this.lat,
       lng: this.lng,
       cover: this.cover,

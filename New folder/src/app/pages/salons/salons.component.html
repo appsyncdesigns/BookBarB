@@ -171,7 +171,8 @@
                             <h4>{{util.translate("Owner Details")}} </h4>
                         </div>
                     </div>
-                    <div class="card-body" *ngIf="action =='create'">
+                    <!-- <div class="card-body" *ngIf="action =='create'"> -->
+                        <div class="card-body">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
@@ -213,8 +214,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row" *ngIf="action =='create'">
-                            <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-6" *ngIf="action =='create'">
                                 <div class="form-group">
                                     <div class="input-group input-group-alternative">
                                         <input type="text" id="input-first-name"
