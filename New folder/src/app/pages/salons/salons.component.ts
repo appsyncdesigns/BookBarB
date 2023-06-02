@@ -572,9 +572,9 @@ export class SalonsComponent implements OnInit {
         this.about = data.data.about;
         this.cover = data.data.cover;
         this.name = data.data.name;
-        this.email = data.userinfo.email;
-        this.mobile = data.data.userinfo.mobile;
-        this.password = data.data.userinfo.password;
+        this.email = data.data.email;
+        this.mobile = data.data.mobile;
+        this.password = data.data.password;
         this.address = data.data.address;
         this.have_shop = data.data.have_shop;
         this.have_stylist = data.data.have_stylist;
