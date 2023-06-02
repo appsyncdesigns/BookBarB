@@ -568,7 +568,7 @@ export class SalonsComponent implements OnInit {
         this.cityID = data.data.cid;
         this.zipcode = data.data.zipcode;
         this.lat = data.data.lat;
-        this.lng = data.data.lng;
+        this.lng = '';
         this.about = data.data.about;
         this.cover = data.data.cover;
         this.name = data.data.name;
