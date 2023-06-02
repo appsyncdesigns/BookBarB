@@ -568,11 +568,11 @@ export class SalonsComponent implements OnInit {
         this.cityID = data.data.cid;
         this.zipcode = data.data.zipcode;
         this.lat = data.data.lat;
-        this.lng = '';
+        this.lng = data.data.lng;
         this.about = data.data.about;
         this.cover = data.data.cover;
         this.name = data.data.name;
-        this.email = data.data.userinfo.email;
+        this.email = data.userinfo.email;
         this.mobile = data.data.userinfo.mobile;
         this.password = data.data.userinfo.password;
         this.address = data.data.address;
