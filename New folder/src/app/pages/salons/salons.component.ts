@@ -632,7 +632,7 @@ export class SalonsComponent implements OnInit {
 
   updateSalon() {
     if (this.cover == '' || this.name == '' || this.address == '' || this.rate == ''
-      || this.about == '' || this.cityID == '' || this.zipcode == '' || this.lat == '' || this.lng == '') {
+      || this.about == '' || this.cityID == '' || this.selectedUsertypes.length <= 0 || this.zipcode == '' || this.lat == '' || this.lng == '') {
       this.util.error(this.util.translate('All Fields are required'));
       return false;
     }
