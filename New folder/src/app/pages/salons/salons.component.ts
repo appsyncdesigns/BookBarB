@@ -644,6 +644,8 @@ export class SalonsComponent implements OnInit {
     const body = {
       id: this.salonId,
       name: this.name,
+      first_name:this.firstName,
+      last_name: this.lastName,
       email: this.email,
       mobile: this.mobile,
       lat: this.lat,
