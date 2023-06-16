@@ -103,7 +103,7 @@ export class OffersComponent implements OnInit {
   }
 
   getDate(item: any) {
-    return moment(item).format('lll');
+    return moment(item).format("DD/MM/YYYY");
   }
 
   ngOnInit(): void {
