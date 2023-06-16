@@ -38,8 +38,8 @@ export class ComplaintsComponent implements OnInit {
     this.util.translate('Freelancer'),
     this.util.translate('Driver'),
     this.util.translate('Product'),
-    this.util.translate('Service'),
     this.util.translate('Packages'),
+    this.util.translate('Service'),
   ];
   constructor(
     public api: ApiService,
