@@ -86,8 +86,8 @@
                                 </td>
                                 <td>{{item.title}}</td>
                                 <td>
-                                    <c-badge [color]="item.status == 1?'success':'dark'"
-                                        [class]="item.status == 1 ? 'me-1 badge bg-success':'me-1 badge bg-dark'"
+                                    <c-badge [color]="item.status == 1?'dark':'success'"
+                                        [class]="item.status == 1 ? 'me-1 badge bg-dark':'me-1 badge bg-success'"
                                         (click)="statusUpdate(item)">
                                         {{item.status == 1 ?util.translate('Resolved'):util.translate('Active')}}
                                     </c-badge>
