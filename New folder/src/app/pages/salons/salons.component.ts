@@ -67,7 +67,7 @@ export class SalonsComponent implements OnInit {
   salonUID: any = '';
   action: any = 'create';
   page: number = 1;
-  rate: any = '';
+  // rate: any = '';
   constructor(
     public api: ApiService,
     public util: UtilService,
@@ -224,8 +224,7 @@ export class SalonsComponent implements OnInit {
     console.log(this.service_at_home);
     if (this.firstName == '' || this.lastName == '' || this.email == ''
       || this.password == '' || this.country_code == '' || this.mobile == ''
-      || this.selectedItems.length <= 0 || this.selectedUsertypes.length <= 0 || this.cityID == '' || this.rate == ''
-      || this.zipcode == '' || this.lat == '' || this.lng == '' || this.about == '' || this.address == ''
+      || this.selectedItems.length <= 0 || this.selectedUsertypes.length <= 0 || this.cityID == '' || this.zipcode == '' || this.lat == '' || this.lng == '' || this.about == '' || this.address == ''
       || this.mobile == null || this.cover == '' || this.name == '') {
       this.util.error(this.util.translate('All Fields are required'));
       return false;
@@ -333,7 +332,7 @@ export class SalonsComponent implements OnInit {
       popular: 0,
       in_home: 1,
       extra_field: 'NA',
-      rate: this.rate
+      // rate: this.rate
     };
     this.util.show();
     this.api.post_private('v1/salon/create', body).then((data: any) => {
@@ -376,7 +375,7 @@ export class SalonsComponent implements OnInit {
     this.have_shop = false;
     this.have_stylist = false;
     this.service_at_home = false;
-    this.rate = '';
+    // this.rate = '';
   }
 
   changeShop(item: any) {
@@ -631,8 +630,7 @@ export class SalonsComponent implements OnInit {
   }
 
   updateSalon() {
-    if (this.cover == '' || this.name == '' || this.address == '' || this.rate == ''
-      || this.about == '' || this.cityID == '' || this.selectedUsertypes.length <= 0 || this.zipcode == '' || this.lat == '' || this.lng == '') {
+    if (this.cover == '' || this.name == '' || this.address == '' || this.about == '' || this.cityID == '' || this.selectedUsertypes.length <= 0 || this.zipcode == '' || this.lat == '' || this.lng == '') {
       this.util.error(this.util.translate('All Fields are required'));
       return false;
     }
@@ -660,7 +658,7 @@ export class SalonsComponent implements OnInit {
       have_shop: this.have_shop == true ? 1 : 0,
       service_at_home: this.service_at_home == true ? 1 : 0,
       have_stylist: this.have_stylist == true ? 1 : 0,
-      rate: this.rate
+      // rate: this.rate
     };
     this.util.show();
     this.api.post_private('v1/salon/update', body).then((data: any) => {
