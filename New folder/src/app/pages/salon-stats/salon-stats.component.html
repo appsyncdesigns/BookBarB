@@ -26,21 +26,21 @@
                                     <div class="form-group row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label class="form-control-label" for="{{util.translate('Select Salon')}}">{{util.translate('Select Salon')}}</label>
-                                                <select name="select" [(ngModel)]="freelancerUId" class="form-control">
+                                                <label class="form-control-label" for="salon-id">{{util.translate('Select Salon')}}</label>
+                                                <select name="select" id="salon-id" [(ngModel)]="freelancerUId" class="form-control">
                                                     <option [value]="item.uid" *ngFor="let item of freelancers">
                                                         {{item.name}} </option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
-                                            <label class="form-control-label" for="{{util.translate('From Date')}}">{{util.translate('From Date')}} </label>
-                                            <input type="date" [(ngModel)]="from" class="form-control"
+                                            <label class="form-control-label" for="from-date">{{util.translate('From Date')}} </label>
+                                            <input type="date" id="from-date" [(ngModel)]="from" class="form-control"
                                                 [placeholder]="util.translate('Expire Date')">
                                         </div>
                                         <div class="col-sm-6">
-                                            <label class="form-control-label" for="{{util.translate('To Date')}}">{{util.translate('To Date')}} </label>
-                                            <input type="date" [(ngModel)]="to" class="form-control"
+                                            <label class="form-control-label" for="to-date">{{util.translate('To Date')}} </label>
+                                            <input type="date" id="to-date" [(ngModel)]="to" class="form-control"
                                                 [placeholder]="util.translate('Expire Date')">
                                         </div>
                                     </div>
