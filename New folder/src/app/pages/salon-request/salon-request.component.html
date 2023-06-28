@@ -107,6 +107,7 @@
                 </button>
             </div>
             <div class="modal-body" style="overflow: scroll;height: 150px;">
+                <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label class="form-control-label" for="input-email">
@@ -123,6 +124,8 @@
                             placeholder="Password" [(ngModel)]="password">
                     </div>
                 </div>
+                </div>
+                <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label class="form-control-label" for="input-email">
@@ -139,6 +142,7 @@
                             placeholder="Mobile" [(ngModel)]="mobile">
                     </div>
                 </div>
+                </div>
                 <div class="center-data-helper">
                     <p class="text-heler">{{util.translate('Select Latitude')}} &amp;
                         {{util.translate('Longitude From here')}}:
@@ -151,6 +155,7 @@
                         {{util.translate('Longitude otherwise app may not work properly.')}}
                     </p>
                 </div>
+                <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label class="form-control-label" for="input-email">
@@ -166,6 +171,7 @@
                         <input type="number" id="input-email" class="form-control form-control-alternative"
                             placeholder="Longitude" [(ngModel)]="lng">
                     </div>
+                </div>
                 </div>
             </div>
             <div class="modal-footer">
