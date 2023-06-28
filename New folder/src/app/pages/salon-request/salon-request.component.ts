@@ -32,6 +32,7 @@ export class SalonRequestComponent implements OnInit {
   cover: any = '';
   categories: any[] = [];
   selectedItems = [];
+  salontype = [];
   cities: any[] = [];
   fee_start: any = '';
   lat: any = '';
@@ -136,6 +137,7 @@ export class SalonRequestComponent implements OnInit {
         this.descriptions = item.descriptions;
         this.gender = item.gender;
         this.selectedItems = item.web_cates_data;
+        this.salontype = item.salon_type_data;
         this.fee_start = item.hourly_price;
         // this.lat = item.lat;
         // this.lng = item.lng;
@@ -149,8 +151,12 @@ export class SalonRequestComponent implements OnInit {
   }
 
   acceptRequest() {
-    if (this.rate == '' || this.rate == null) {
-      this.util.error(this.util.translate('Please add commission rate'));
+    if (this.email == '' || this.email == null || this.password == '' || this.password == null || 
+    this.mobile == '' || this.mobile == null ||  
+    this.country_code == '' || this.country_code == null || 
+    this.lat == '' || this.lat == null ||  
+    this.lng == '' || this.lng == null) {
+      this.util.error(this.util.translate('All fields are required'));
       return false;
     }
     const cc: string = (this.country_code).toString();
@@ -220,6 +226,7 @@ export class SalonRequestComponent implements OnInit {
   saveSalonProfile(uid: any) {
     console.log('uid', uid);
     const ids = this.selectedItems.map((x: any) => x.id);
+    const sids = this.salontype.map((x: any) => x.id);
     console.log(ids);
     const body = {
       uid: uid,
@@ -229,6 +236,7 @@ export class SalonRequestComponent implements OnInit {
       lng: this.lng,
       cover: this.cover,
       categories: ids.join(),
+      salontype: sids.join(),
       address: this.address,
       about: this.descriptions,
       images: 'NA',
