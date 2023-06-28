@@ -32,7 +32,7 @@ export class SalonRequestComponent implements OnInit {
   cover: any = '';
   categories: any[] = [];
   selectedItems = [];
-  salontype = [];
+  UserType = [];
   cities: any[] = [];
   fee_start: any = '';
   lat: any = '';
@@ -137,7 +137,7 @@ export class SalonRequestComponent implements OnInit {
         this.descriptions = item.descriptions;
         this.gender = item.gender;
         this.selectedItems = item.web_cates_data;
-        this.salontype = item.salon_type_data;
+        this.UserType = item.salon_type_data;
         this.fee_start = item.hourly_price;
         // this.lat = item.lat;
         // this.lng = item.lng;
@@ -226,7 +226,7 @@ export class SalonRequestComponent implements OnInit {
   saveSalonProfile(uid: any) {
     console.log('uid', uid);
     const ids = this.selectedItems.map((x: any) => x.id);
-    const sids = this.salontype.map((x: any) => x.id);
+    const sids = this.UserType.map((x: any) => x.id);
     console.log(ids);
     const body = {
       uid: uid,
@@ -236,7 +236,7 @@ export class SalonRequestComponent implements OnInit {
       lng: this.lng,
       cover: this.cover,
       categories: ids.join(),
-      salontype: sids.join(),
+      UserType: sids.join(),
       address: this.address,
       about: this.descriptions,
       images: 'NA',
