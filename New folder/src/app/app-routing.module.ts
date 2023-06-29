@@ -211,6 +211,11 @@ const routes: Routes = [
         path: 'salon-request',
         loadChildren: () => import('./pages/salon-request/salon-request.module').then(m => m.SalonRequestModule),
         canActivate: [AuthGuard]
+      },
+      {
+        path: 'homeservice',
+        loadChildren: () => import('./pages/homeservice/homeservice.module').then(m => m.HomeserviceModule),
+        canActivate: [AuthGuard]
       }
     ]
   },
