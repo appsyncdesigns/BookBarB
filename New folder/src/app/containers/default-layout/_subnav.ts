@@ -202,11 +202,11 @@ export const subNavItems: INavData[] = [
   //   url: '/administrator',
   //   iconComponent: { name: 'cil-line-weight' }
   // },
-  // {
-  //   name: 'Notifications',
-  //   url: '/notifications',
-  //   iconComponent: { name: 'cil-bell-exclamation' }
-  // },
+  {
+    name: 'Notifications',
+    url: '/notifications',
+    iconComponent: { name: 'cil-bell-exclamation' }
+  },
   {
     name: 'Send Mail',
     url: '/send-mail',
