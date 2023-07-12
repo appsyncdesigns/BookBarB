@@ -60,33 +60,33 @@ export const subNavItems: INavData[] = [
     name: 'Homeservices',
     url: '/homeservice',
     iconComponent: { name: 'cil-bank' },
-    children: [
-      {
-        name: 'Homeservices',
-        url: '/homeservice',
-        iconComponent: { name: 'cil-bank' }
-      },
-      {
-        name: 'Slots',
-        url: '/slots',
-        iconComponent: { name: 'cil-calendar' },
-      },
-      {
-        name: 'Services',
-        url: '/services',
-        iconComponent: { name: 'cil-face' }
-      },
-      {
-        name: 'Packages',
-        url: '/packages',
-        iconComponent: { name: 'cil-chart-line' }
-      },
-      {
-        name: 'Specialists',
-        url: '/specialists',
-        iconComponent: { name: 'cil-chart-line' }
-      }
-    ]
+    // children: [
+    //   {
+    //     name: 'Homeservices',
+    //     url: '/homeservice',
+    //     iconComponent: { name: 'cil-bank' }
+    //   },
+    //   {
+    //     name: 'Slots',
+    //     url: '/slots',
+    //     iconComponent: { name: 'cil-calendar' },
+    //   },
+    //   {
+    //     name: 'Services',
+    //     url: '/services',
+    //     iconComponent: { name: 'cil-face' }
+    //   },
+    //   {
+    //     name: 'Packages',
+    //     url: '/packages',
+    //     iconComponent: { name: 'cil-chart-line' }
+    //   },
+    //   {
+    //     name: 'Specialists',
+    //     url: '/specialists',
+    //     iconComponent: { name: 'cil-chart-line' }
+    //   }
+    // ]
   },
   // {
   //   name: 'Freelancer',
