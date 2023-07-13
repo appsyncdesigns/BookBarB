@@ -343,6 +343,7 @@ export class HomeserviceComponent implements OnInit {
         this.getAllSalon();
         this.clearData();
         this.util.success(this.util.translate('Salon added !'));
+        this.action = 'Added';
       }
     }, error => {
       this.util.hide();

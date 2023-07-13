@@ -16,7 +16,7 @@
                     {{util.translate('All Salons')}}
                     <div class="card-header-actions">
                         <button type="submit" class="btn btn-sm btn-primary" style="float: right;margin: 0px 5px;"
-                            (click)="createNew()">
+                        *ngIf="action !='Added'" (click)="createNew()">
                             {{util.translate('Add New')}}
                         </button> &nbsp;
                     </div>
