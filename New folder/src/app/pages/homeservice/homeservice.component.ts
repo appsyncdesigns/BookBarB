@@ -85,7 +85,7 @@ export class HomeserviceComponent implements OnInit {
     this.salons = [];
     this.dummySalons = Array(5);
 
-    this.api.get_private('v1/salon/getAll').then((data: any) => {
+    this.api.get_private('v1/homeservice/getAll').then((data: any) => {
       this.dummySalons = [];
       if (data && data.status && data.status == 200 && data.success) {
         console.log(">>>>>", data);
