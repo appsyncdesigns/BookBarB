@@ -252,7 +252,7 @@ export class HomeserviceComponent implements OnInit {
       password: this.password
     };
     this.util.show();
-    this.api.post_private('v1/auth/createSalonAccount', param).then((data: any) => {
+    this.api.post_private('v1/auth/createHomeserviceAccount', param).then((data: any) => {
       this.util.hide();
       console.log(data);
       if (data.status == 500) {
@@ -342,8 +342,8 @@ export class HomeserviceComponent implements OnInit {
         this.myModal2.hide();
         this.getAllSalon();
         this.clearData();
-        this.util.success(this.util.translate('Salon added !'));
-        this.action = 'Added';
+        this.util.success(this.util.translate('Homeservice added !'));
+        // this.action = 'Added';
       }
     }, error => {
       this.util.hide();
