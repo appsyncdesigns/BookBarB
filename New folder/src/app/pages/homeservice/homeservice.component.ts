@@ -335,7 +335,7 @@ export class HomeserviceComponent implements OnInit {
       // rate: this.rate
     };
     this.util.show();
-    this.api.post_private('v1/homeservice/create', body).then((data: any) => {
+    this.api.post_private('v1/salon/create', body).then((data: any) => {
       console.log("+++++++++++++++", data);
       this.util.hide();
       if (data && data.status && data.status == 200 && data.success) {
@@ -387,7 +387,7 @@ export class HomeserviceComponent implements OnInit {
     };
     console.log("======", body);
     this.util.show();
-    this.api.post_private('v1/homeservice/update', body).then((data: any) => {
+    this.api.post_private('v1/salon/update', body).then((data: any) => {
       this.util.hide();
       console.log("+++++++++++++++", data);
       if (data && data.status && data.status == 200 && data.success) {
@@ -413,7 +413,7 @@ export class HomeserviceComponent implements OnInit {
     };
     console.log("======", body);
     this.util.show();
-    this.api.post_private('v1/homeservice/update', body).then((data: any) => {
+    this.api.post_private('v1/salon/update', body).then((data: any) => {
       this.util.hide();
       console.log("+++++++++++++++", data);
       if (data && data.status && data.status == 200 && data.success) {
@@ -439,7 +439,7 @@ export class HomeserviceComponent implements OnInit {
     };
     console.log("======", body);
     this.util.show();
-    this.api.post_private('v1/homeservice/update', body).then((data: any) => {
+    this.api.post_private('v1/salon/update', body).then((data: any) => {
       this.util.hide();
       console.log("+++++++++++++++", data);
       if (data && data.status && data.status == 200 && data.success) {
@@ -465,7 +465,7 @@ export class HomeserviceComponent implements OnInit {
     };
     console.log("======", body);
     this.util.show();
-    this.api.post_private('v1/homeservice/update', body).then((data: any) => {
+    this.api.post_private('v1/salon/update', body).then((data: any) => {
       this.util.hide();
       console.log("+++++++++++++++", data);
       if (data && data.status && data.status == 200 && data.success) {
@@ -491,7 +491,7 @@ export class HomeserviceComponent implements OnInit {
     };
     console.log("======", body);
     this.util.show();
-    this.api.post_private('v1/homeservice/update', body).then((data: any) => {
+    this.api.post_private('v1/salon/update', body).then((data: any) => {
       this.util.hide();
       console.log("+++++++++++++++", data);
       if (data && data.status && data.status == 200 && data.success) {
@@ -532,7 +532,7 @@ export class HomeserviceComponent implements OnInit {
         };
         console.log("======", body);
         this.util.show();
-        this.api.post_private('v1/homeservice/destroy', body).then((data: any) => {
+        this.api.post_private('v1/salon/destroy', body).then((data: any) => {
           this.util.hide();
           console.log("+++++++++++++++", data);
           if (data && data.status && data.status == 200 && data.success) {
@@ -558,7 +558,7 @@ export class HomeserviceComponent implements OnInit {
     this.salonUID = uid;
 
     this.util.show();
-    this.api.post_private('v1/homeservice/getById', { id: uid }).then((data: any) => {
+    this.api.post_private('v1/salon/getById', { id: uid }).then((data: any) => {
       console.log(data);
       this.util.hide();
       if (data && data.status && data.status == 200) {
@@ -610,7 +610,7 @@ export class HomeserviceComponent implements OnInit {
         };
         console.log("======", body);
         this.util.show();
-        this.api.post_private('v1/homeservice/update', body).then((data: any) => {
+        this.api.post_private('v1/salon/update', body).then((data: any) => {
           this.util.hide();
           console.log("+++++++++++++++", data);
           if (data && data.status && data.status == 200 && data.success) {
@@ -662,7 +662,7 @@ export class HomeserviceComponent implements OnInit {
       // rate: this.rate
     };
     this.util.show();
-    this.api.post_private('v1/homeservice/update', body).then((data: any) => {
+    this.api.post_private('v1/salon/update', body).then((data: any) => {
       console.log("+++++++++++++++", data);
       this.util.hide();
       if (data && data.status && data.status == 200 && data.success) {
