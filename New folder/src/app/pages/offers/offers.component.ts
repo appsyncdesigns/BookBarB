@@ -196,19 +196,19 @@ export class OffersComponent implements OnInit {
     }
     const param = {
       name: this.name,
-      freelancer_ids: values,
+      // freelancer_ids: values,
       code: this.name,
       discount: this.off,
-      max_usage: this.max_usage,
-      min_cart_value: this.min_cart_value,
+      // max_usage: this.max_usage,
+      // min_cart_value: this.min_cart_value,
       validations: 1,
-      user_limit_validation: this.user_limit_validation,
+      // user_limit_validation: this.user_limit_validation,
       type: this.type,
       expire: this.expire,
       manage: 0,
       short_descriptions: this.descriptions,
       status: 1,
-      upto: this.upto,
+      // upto: this.upto,
       for: 1
     };
 
@@ -270,19 +270,19 @@ export class OffersComponent implements OnInit {
     }
     const param = {
       name: this.name,
-      freelancer_ids: values,
+      // freelancer_ids: values,
       code: this.name,
       discount: this.off,
-      max_usage: this.max_usage,
-      min_cart_value: this.min_cart_value,
+      // max_usage: this.max_usage,
+      // min_cart_value: this.min_cart_value,
       validations: 1,
-      user_limit_validation: this.user_limit_validation,
+      // user_limit_validation: this.user_limit_validation,
       type: this.type,
       expire: this.expire,
       manage: 0,
       short_descriptions: this.descriptions,
       status: 1,
-      upto: this.upto,
+      // upto: this.upto,
       id: this.offerId
     };
 
