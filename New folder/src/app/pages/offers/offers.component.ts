@@ -175,10 +175,11 @@ export class OffersComponent implements OnInit {
 
   saveChanges() {
     console.log(this.value);
-
-    if (this.name == '' || this.name == null || this.off == '' || this.off == null || this.upto == '' || this.upto == null ||
-      this.type == '' || this.type == null || this.descriptions == null || this.descriptions == '' || this.expire == '' || this.expire == null ||
-      this.max_usage == '' || this.max_usage == null || this.min_cart_value == '' || this.min_cart_value == null || this.user_limit_validation == '' || this.user_limit_validation == null) {
+    // if (this.name == '' || this.name == null || this.off == '' || this.off == null || this.upto == '' || this.upto == null ||
+    // this.type == '' || this.type == null || this.descriptions == null || this.descriptions == '' || this.expire == '' || this.expire == null ||
+    // this.max_usage == '' || this.max_usage == null || this.min_cart_value == '' || this.min_cart_value == null || this.user_limit_validation == '' || this.user_limit_validation == null)
+    if (this.name == '' || this.name == null || this.off == '' || this.off == null || 
+      this.type == '' || this.type == null || this.descriptions == null || this.descriptions == '' || this.expire == '' || this.expire == null ) {
       this.util.error(this.util.translate('All Fields are required'));
       return false;
     }
