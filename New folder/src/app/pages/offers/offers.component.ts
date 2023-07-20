@@ -164,8 +164,8 @@ export class OffersComponent implements OnInit {
   clearData() {
     this.name = '';
     this.off = '';
-    this.min_cart_value = '';
-    this.upto = '';
+    // this.min_cart_value = '';
+    // this.upto = '';
     this.type = '';
     this.descriptions = '';
     this.expire = '';
@@ -188,12 +188,12 @@ export class OffersComponent implements OnInit {
     //   this.util.error(this.util.translate('Please select Freelancers'));
     //   return false;
     // }
-    let values = '';
-    const ids = this.value.map((x: any) => x.id);
-    console.log('ids', ids);
-    if (ids && ids.length) {
-      values = ids.join();
-    }
+    // let values = '';
+    // const ids = this.value.map((x: any) => x.id);
+    // console.log('ids', ids);
+    // if (ids && ids.length) {
+    //   values = ids.join();
+    // }
     const param = {
       name: this.name,
       // freelancer_ids: values,
@@ -241,10 +241,10 @@ export class OffersComponent implements OnInit {
     console.log(this.upto);
     console.log(this.descriptions);
     console.log(this.expire);
-    console.log(this.max_usage);
-    console.log(this.min_cart_value);
-    console.log(this.user_limit_validation);
-    console.log(this.value);
+    // console.log(this.max_usage);
+    // console.log(this.min_cart_value);
+    // console.log(this.user_limit_validation);
+    // console.log(this.value);
     // if (this.name == '' || this.name == null || this.off == '' || this.off == null || this.upto == '' || this.upto == null ||
     //   this.descriptions == null || this.descriptions == '' || this.expire == '' || this.expire == null ||
     //   this.max_usage == '' || this.max_usage == null || this.min_cart_value == '' || this.min_cart_value == null || this.user_limit_validation == '' || this.user_limit_validation == null) {
@@ -262,12 +262,12 @@ export class OffersComponent implements OnInit {
     //   this.util.error(this.util.translate('Please select Freelancers'));
     //   return false;
     // }
-    let values = '';
-    const ids = this.value.map((x: any) => x.id);
-    console.log('ids', ids);
-    if (ids && ids.length) {
-      values = ids.join();
-    }
+    // let values = '';
+    // const ids = this.value.map((x: any) => x.id);
+    // console.log('ids', ids);
+    // if (ids && ids.length) {
+    //   values = ids.join();
+    // }
     const param = {
       name: this.name,
       // freelancer_ids: values,
@@ -319,14 +319,14 @@ export class OffersComponent implements OnInit {
         const info = data.data;
         this.name = info.name;
         this.off = info.discount;
-        this.upto = info.upto;
+        // this.upto = info.upto;
         this.type = info.type;
         this.descriptions = info.short_descriptions;
-        this.max_usage = info.max_usage;
-        this.min_cart_value = info.min_cart_value;
-        this.user_limit_validation = info.user_limit_validation;
+        // this.max_usage = info.max_usage;
+        // this.min_cart_value = info.min_cart_value;
+        // this.user_limit_validation = info.user_limit_validation;
         this.expire = moment(info.expire).format('dd/mm/yyyy');
-        this.value = info.freelancers;
+        // this.value = info.freelancers;
         this.myModal2.show();
       }
     }, error => {
