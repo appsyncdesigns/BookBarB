@@ -252,10 +252,10 @@ export class OffersComponent implements OnInit {
       return false;
     }
 
-    if (this.value == '' || this.value == null || this.value.length <= 0) {
-      this.util.error(this.util.translate('Please select Freelancers'));
-      return false;
-    }
+    // if (this.value == '' || this.value == null || this.value.length <= 0) {
+    //   this.util.error(this.util.translate('Please select Freelancers'));
+    //   return false;
+    // }
     let values = '';
     const ids = this.value.map((x: any) => x.id);
     console.log('ids', ids);
