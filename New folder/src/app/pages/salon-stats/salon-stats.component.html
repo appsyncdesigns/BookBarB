@@ -100,7 +100,7 @@
                                                 <th>{{util.translate('Total')}} </th>
                                                 <th>{{util.translate('Discount')}} </th>
                                                 <th>{{util.translate('Grand Total')}} </th>
-                                                <th>{{util.translate('Commission')}} </th>
+                                                <!-- <th>{{util.translate('Commission')}} </th> -->
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -148,11 +148,11 @@
                                                         {{util.currecny}}</span>
                                                 </td>
                                                 <td>
-                                                    <span *ngIf="util.cside =='left'">{{util.currecny}}
+                                                    <!-- <span *ngIf="util.cside =='left'">{{util.currecny}}
                                                         {{getCommisions(item.total)}}
-                                                    </span>
-                                                    <span *ngIf="util.cside =='right'">{{getCommisions(item.total)}}
-                                                        {{util.currecny}}</span>
+                                                    </span> -->
+                                                    <!-- <span *ngIf="util.cside =='right'">{{getCommisions(item.total)}}
+                                                        {{util.currecny}}</span> -->
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -163,14 +163,14 @@
                                             <p
                                                 style="text-align: right;font-weight: bold;margin: 0px !important;color: #7EC6AA;;">
                                                 {{util.translate('Total')}} </p>
-                                            <p
+                                            <!-- <p
                                                 style="text-align: right;font-weight: bold;margin: 0px !important;color: #7EC6AA;;">
                                                 {{util.translate('Commission')}}
                                             </p>
                                             <p
                                                 style="text-align: right;font-weight: bold;margin: 0px !important;color: #7EC6AA;;">
                                                 {{util.translate('Amount Pay')}}
-                                            </p>
+                                            </p> -->
                                         </div>
                                         <div class="col-sm-2">
                                             <p
@@ -181,22 +181,22 @@
                                                 <span *ngIf="util.cside =='right'">{{totalAmount}}
                                                     {{util.currecny}}</span>
                                             </p>
-                                            <p
+                                            <!-- <p
                                                 style="color: black !important; margin: 0px !important;text-align: right;">
 
                                                 <span *ngIf="util.cside =='left'">{{util.currecny}} {{commisionAmount}}
                                                 </span>
                                                 <span *ngIf="util.cside =='right'">{{commisionAmount}}
                                                     {{util.currecny}}</span>
-                                            </p>
-                                            <p
-                                                style="color: black !important;margin: 0px !important;text-align: right;">
+                                            </p> -->
+                                            <!-- <p
+                                                style="color: black !important;margin: 0px !important;text-align: right;"> -->
                                                 <!-- {{toPay}} -->
-                                                <span *ngIf="util.cside =='left'">{{util.currecny}} {{toPay}}
+                                                <!-- <span *ngIf="util.cside =='left'">{{util.currecny}} {{toPay}}
                                                 </span>
                                                 <span *ngIf="util.cside =='right'">{{toPay}}
                                                     {{util.currecny}}</span>
-                                            </p>
+                                            </p> -->
                                         </div>
                                     </div>
                                 </div>
