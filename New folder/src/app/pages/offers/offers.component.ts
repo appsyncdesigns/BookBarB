@@ -184,10 +184,10 @@ export class OffersComponent implements OnInit {
       return false;
     }
 
-    if (this.value == '' || this.value == null || this.value.length <= 0) {
-      this.util.error(this.util.translate('Please select Freelancers'));
-      return false;
-    }
+    // if (this.value == '' || this.value == null || this.value.length <= 0) {
+    //   this.util.error(this.util.translate('Please select Freelancers'));
+    //   return false;
+    // }
     let values = '';
     const ids = this.value.map((x: any) => x.id);
     console.log('ids', ids);
@@ -245,9 +245,15 @@ export class OffersComponent implements OnInit {
     console.log(this.min_cart_value);
     console.log(this.user_limit_validation);
     console.log(this.value);
-    if (this.name == '' || this.name == null || this.off == '' || this.off == null || this.upto == '' || this.upto == null ||
-      this.descriptions == null || this.descriptions == '' || this.expire == '' || this.expire == null ||
-      this.max_usage == '' || this.max_usage == null || this.min_cart_value == '' || this.min_cart_value == null || this.user_limit_validation == '' || this.user_limit_validation == null) {
+    // if (this.name == '' || this.name == null || this.off == '' || this.off == null || this.upto == '' || this.upto == null ||
+    //   this.descriptions == null || this.descriptions == '' || this.expire == '' || this.expire == null ||
+    //   this.max_usage == '' || this.max_usage == null || this.min_cart_value == '' || this.min_cart_value == null || this.user_limit_validation == '' || this.user_limit_validation == null) {
+    //   this.util.error(this.util.translate('All Fields are required'));
+    //   return false;
+    // }
+
+    if (this.name == '' || this.name == null || this.off == '' || this.off == null || 
+      this.type == '' || this.type == null || this.descriptions == null || this.descriptions == '' || this.expire == '' || this.expire == null ) {
       this.util.error(this.util.translate('All Fields are required'));
       return false;
     }
