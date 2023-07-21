@@ -22,20 +22,13 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <label class="modal_lbl">{{util.translate('Search salon')}}</label>
-                            <input type="text" [(ngModel)]="search" (input)="searchSalon($event.target.value)"
-                                class="form-control" [placeholder]="util.translate('Search salon')"
-                                [ngModelOptions]="{standalone: true}">
-                            <div *ngFor="let item of salons" (click)="selectSalon(item)">
-                                <div class="selectItem">
-                                    <img [src]="api.imageUrl+item.cover" alt="" class="imgs">
-                                    <p class="name"> {{item.id}} - {{item.name}}</p>
-                                </div>
-                            </div>
+                    <div class="row flex_row">
+                        <div class="col-lg-12">
+                            <input type="text" class="form-control form-control-lg" id="name"
+                                [placeholder]="util.translate('Search salon')" (input)="search($event.target.value)">
                         </div>
                     </div>
+
                     <div class="error_div" *ngIf="salons?.length <= 0 && dummySalons?.length <= 0">
                         <label>{{util.translate('No Data Found..')}}</label>
                     </div>
