@@ -43,8 +43,6 @@ export class SalonsComponent implements OnInit {
   website: any = '';
   cityID: any = '';
   zipcode: any = '';
-  link: any = 0;
-  search: any = '';
   dropdownSettings = {
     singleSelection: false,
     idField: 'id',
@@ -107,21 +105,20 @@ export class SalonsComponent implements OnInit {
     });
   }
 
-  selectSalon(item: any) {
-    this.link = item.uid;
-    this.search = item.name;
-    this.salons = [];
+  search(str: any) {
+    this.resetChanges();
+    console.log('string', str);
+    this.salons = this.filterItems(str);
   }
 
-  searchSalon(str: any) {
-    console.log(str);
-    if (str && str !== '') {
-      this.salons = this.dummySalons.filter((item) => {
-        return item.name.toLowerCase().indexOf(str.toLowerCase()) > -1;
-      });
-    } else {
-      this.salons = [];
-    }
+  protected resetChanges = () => {
+    this.salons = this.salons;
+  }
+
+  filterItems(searchTerm: any) {
+    return this.salons.filter((item) => {
+      return item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+    });
   }
 
   preview_banner(files: any) {
