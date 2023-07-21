@@ -140,11 +140,11 @@ export const navItems: INavData[] = [
   //   url: '/referral',
   //   iconComponent: { name: 'cil-tags' }
   // },
-  {
-    name: 'Supports',
-    url: '/supports',
-    iconComponent: { name: 'cil-info' }
-  },
+  // {
+  //   name: 'Supports',
+  //   url: '/supports',
+  //   iconComponent: { name: 'cil-info' }
+  // },
   {
     name: 'Complaints',
     url: '/complaints',
