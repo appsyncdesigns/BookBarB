@@ -22,12 +22,6 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="row flex_row">
-                        <div class="col-lg-12">
-                          <input type="text" class="form-control" id="name" [placeholder]="util.translate('Search salon')"
-                            (input)="search($event.target.value)">
-                        </div>
-                      </div>
 
                     <div class="error_div" *ngIf="salons?.length <= 0 && dummySalons?.length <= 0">
                         <label>{{util.translate('No Data Found..')}}</label>
