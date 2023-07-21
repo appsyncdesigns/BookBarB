@@ -43,6 +43,8 @@ export class SalonsComponent implements OnInit {
   website: any = '';
   cityID: any = '';
   zipcode: any = '';
+  link: any = 0;
+  search: any = '';
   dropdownSettings = {
     singleSelection: false,
     idField: 'id',
@@ -103,6 +105,23 @@ export class SalonsComponent implements OnInit {
       console.log('Err', error);
       this.util.apiErrorHandler(error);
     });
+  }
+
+  selectSalon(item: any) {
+    this.link = item.uid;
+    this.search = item.name;
+    this.salons = [];
+  }
+
+  searchSalon(str: any) {
+    console.log(str);
+    if (str && str !== '') {
+      this.salons = this.dummySalons.filter((item) => {
+        return item.name.toLowerCase().indexOf(str.toLowerCase()) > -1;
+      });
+    } else {
+      this.salons = [];
+    }
   }
 
   preview_banner(files: any) {
