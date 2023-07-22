@@ -113,7 +113,7 @@ export class SalonsComponent implements OnInit {
     this.salons = [];
   }
 
-  searchSalon(str: any) {
+  searchSal(str: any) {
     console.log(str);
     if (str && str !== '') {
       this.salons = this.salons.filter((item) => {
