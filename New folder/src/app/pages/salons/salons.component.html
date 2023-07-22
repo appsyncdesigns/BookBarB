@@ -24,7 +24,7 @@
                 <div class="card-body">
                     <div class="row flex_row">
                         <div class="col-lg-12">
-                            <label class="modal_lbl" for="searchtext">{{util.translate('Search salon')}}</label>
+                            <label for="searchtext">{{util.translate('Search salon')}}</label>
                             <input type="text" [(ngModel)]="search" (input)="searchSalon($event.target.value)"
                             class="form-control" [placeholder]="util.translate('Search salon')"
                             [ngModelOptions]="{standalone: true}" id="searchtext">
