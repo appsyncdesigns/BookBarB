@@ -35,7 +35,7 @@ export class ComplaintsComponent implements OnInit {
   issue_With: any[] = [
     '',
     this.util.translate('Order'),
-    this.util.translate('Freelancer'),
+    this.util.translate('Salon'),
     this.util.translate('Driver'),
     this.util.translate('Product'),
     this.util.translate('Packages'),
