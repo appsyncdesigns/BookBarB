@@ -24,10 +24,8 @@
                 <div class="card-body">
                     <div class="row flex_row">
                         <div class="col-lg-12">
-                            <label for="searchtext">{{util.translate('Search salon')}}</label>
-                            <input type="text" [(ngModel)]="search" (input)="searchSalon($event.target.value)"
-                            class="form-control" [placeholder]="util.translate('Search salon')"
-                            [ngModelOptions]="{standalone: true}" id="searchtext">
+                          <input type="text" [(ngModel)]="search" class="form-control" id="search                       " [placeholder]="util.translate('Search salon')"
+                            (change)="search($event.target.value)">
                         </div>
                       </div>
 
