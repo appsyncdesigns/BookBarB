@@ -116,7 +116,7 @@ export class SalonsComponent implements OnInit {
   searchSalon(str: any) {
     console.log(str);
     if (str && str !== '') {
-      this.salons = this.dummySalons.filter((item) => {
+      this.salons = this.salons.filter((item) => {
         return item.name.toLowerCase().indexOf(str.toLowerCase()) > -1;
       });
     } else {
