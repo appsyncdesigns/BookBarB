@@ -131,7 +131,7 @@ export class SalonRequestComponent implements OnInit {
         // this.email = item.email;
         // this.password = item.password;
         // this.country_code = item.country_code;
-        // this.mobile = item.mobile;
+        this.mobile = item.mobile;
         this.cityID = item.cid;
         this.cover = item.cover;
         this.descriptions = item.descriptions;
@@ -152,7 +152,6 @@ export class SalonRequestComponent implements OnInit {
 
   acceptRequest() {
     if (this.email == '' || this.email == null || this.password == '' || this.password == null || 
-    this.mobile == '' || this.mobile == null ||  
     this.country_code == '' || this.country_code == null || 
     this.lat == '' || this.lat == null ||  
     this.lng == '' || this.lng == null) {
@@ -169,7 +168,7 @@ export class SalonRequestComponent implements OnInit {
       last_name: this.lastName,
       gender: this.gender,
       cover: this.cover,
-      mobile: this.mobile,
+      // mobile: this.mobile,
       email: this.email,
       country_code: this.country_code,
       password: this.password
