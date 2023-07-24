@@ -93,6 +93,7 @@ export class SalonsComponent implements OnInit {
         console.log(">>>>>", data);
         if (data.data.length > 0) {
           this.salons = data.data;
+
           console.log("====", this.salons);
         }
       }
@@ -126,6 +127,9 @@ export class SalonsComponent implements OnInit {
 
   onSearchChange(searchValue: string): void {  
     console.log(searchValue);
+    this.salons = this.salons.filter((item) => {
+      return item.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1;
+    });
   }
 
   preview_banner(files: any) {
