@@ -347,10 +347,19 @@
                             <div class="center-data-helper">
                                 <p class="text-heler">{{util.translate('Select Latitude')}} &amp;
                                     {{util.translate('Longitude From here')}}:
-                                    <a href="https://www.google.com/maps/embed/v1/place?key=AIzaSyBl9JDRCDTtjJp4EyarFtocFEgooa1FhmY&q=Space+Needle,Seattle+WA" target="_blank"
+                                    <!-- <a href="https://www.google.com/maps/embed/v1/place?key=AIzaSyBl9JDRCDTtjJp4EyarFtocFEgooa1FhmY&q=Space+Needle,Seattle+WA" target="_blank"
                                         rel="noopener noreferrer"
-                                        style="color: blue !important;">"https://www.google.com/maps/embed/v1/place?key=AIzaSyBl9JDRCDTtjJp4EyarFtocFEgooa1FhmY&q=Space+Needle,Seattle+WA"</a>
-                                </p>
+                                        style="color: blue !important;">"https://www.google.com/maps/embed/v1/place?key=AIzaSyBl9JDRCDTtjJp4EyarFtocFEgooa1FhmY&q=Space+Needle,Seattle+WA"</a> -->
+                                        <iframe width="600" height="450"
+                                        style="border:0"
+                                        loading="lazy"
+                                        allowfullscreen
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBl9JDRCDTtjJp4EyarFtocFEgooa1FhmY
+                                          &q=Space+Needle,Seattle+WA">
+                                      </iframe>
+                                
+                                    </p>
 
                                 <p class="text-heler"> {{util.translate('Please enter valid Latitude')}} &amp;
                                     {{util.translate('Longitude otherwise app may not work properly.')}}
