@@ -25,8 +25,8 @@
                     <div class="row flex_row">
 
                         <div class="col-lg-12">
-                            <input type="text" class="form-control" id="name" [placeholder]="util.translate('Search Category')"
-                              (input)="searchSal($event.target.value)">
+                            <input type="text" class="form-control" [placeholder]="util.translate('Search salon')"
+                              (input)="onSearchChange($event.target.value)">
                           </div>
 
                       </div>

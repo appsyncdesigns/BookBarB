@@ -114,7 +114,7 @@ export class SalonsComponent implements OnInit {
   }
 
   searchSal(str: any) {
-    console.log(str);
+    console.log("hii",str);
     if (str && str !== '') {
       this.salons = this.salons.filter((item) => {
         return item.name.toLowerCase().indexOf(str.toLowerCase()) > -1;
@@ -122,6 +122,10 @@ export class SalonsComponent implements OnInit {
     } else {
       this.salons = [];
     }
+  }
+
+  onSearchChange(searchValue: string): void {  
+    console.log(searchValue);
   }
 
   preview_banner(files: any) {
