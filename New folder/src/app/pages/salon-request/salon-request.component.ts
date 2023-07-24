@@ -168,7 +168,7 @@ export class SalonRequestComponent implements OnInit {
       last_name: this.lastName,
       gender: this.gender,
       cover: this.cover,
-      // mobile: this.mobile,
+      mobile: this.mobile,
       email: this.email,
       country_code: this.country_code,
       password: this.password
