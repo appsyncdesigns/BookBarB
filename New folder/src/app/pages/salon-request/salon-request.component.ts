@@ -130,7 +130,7 @@ export class SalonRequestComponent implements OnInit {
         this.lastName = item.last_name;
         // this.email = item.email;
         // this.password = item.password;
-        // this.country_code = item.country_code;
+        this.country_code = item.country_code;
         this.mobile = item.mobile;
         this.cityID = item.cid;
         this.cover = item.cover;
