@@ -127,9 +127,11 @@ export class SalonsComponent implements OnInit {
 
   onSearchChange(searchValue: string): void {  
     console.log(searchValue);
+    if (searchValue && searchValue !== '') {
     this.salons = this.salons.filter((item) => {
       return item.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1;
     });
+    }
   }
 
   preview_banner(files: any) {
