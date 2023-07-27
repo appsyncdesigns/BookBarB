@@ -249,7 +249,7 @@ export class SalonsComponent implements OnInit {
     console.log(this.have_shop);
     console.log(this.have_stylist);
     console.log(this.service_at_home);
-    if (this.firstName == '' || this.lastName == '' || this.email == ''
+    if (this.firstName == '' || this.lastName == ''
       || this.password == '' || this.country_code == '' || this.mobile == ''
       || this.selectedItems.length <= 0 || this.selectedUsertypes.length <= 0 || this.cityID == '' || this.zipcode == '' || this.lat == '' || this.lng == '' || this.about == '' || this.address == ''
       || this.mobile == null || this.cover == '' || this.name == '') {
