@@ -595,6 +595,7 @@ export class SalonsComponent implements OnInit {
         this.selectedItems = data.data.web_cates_data;
         this.cityID = data.data.cid;
         this.zipcode = data.data.zipcode;
+        this.password = data.data.password;
         this.lat = data.data.lat;
         this.lng = data.data.lng;
         this.about = data.data.about;
@@ -672,6 +673,7 @@ export class SalonsComponent implements OnInit {
       first_name:this.firstName,
       last_name: this.lastName,
       email: this.email,
+      password: this.password,
       mobile: this.mobile,
       lat: this.lat,
       lng: this.lng,
