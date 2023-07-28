@@ -132,7 +132,7 @@ export class SalonsComponent implements OnInit {
       return item.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1;
     });
     } else {
-      this.salons = [];
+      this.salons = this.salons;
     }
   }
 
