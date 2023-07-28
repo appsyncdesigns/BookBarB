@@ -132,9 +132,6 @@ export class SalonsComponent implements OnInit {
       return item.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1;
     });
     }
-   else if(searchValue == '') {
-      this.salons = this.dummySalonList;
-    }
   }
 
   preview_banner(files: any) {
