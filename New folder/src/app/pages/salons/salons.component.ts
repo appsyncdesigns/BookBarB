@@ -93,7 +93,7 @@ export class SalonsComponent implements OnInit {
         console.log(">>>>>", data);
         if (data.data.length > 0) {
           this.salons = data.data;
-
+          this.dummySalons = this.salons;
           console.log("====", this.salons);
         }
       }
@@ -132,7 +132,7 @@ export class SalonsComponent implements OnInit {
       return item.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1;
     });
     } else {
-      this.salons = this.salons;
+      this.salons = this.dummySalons;
     }
   }
 

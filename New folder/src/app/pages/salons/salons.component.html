@@ -319,7 +319,7 @@
                                 <div class="form-group">
                                     <select id="select2" [(ngModel)]="cityID" name="select2"
                                         class="form-control form-control-alternative">
-                                        <option [value]="item.id" *ngFor="let item of cities">  </option>
+                                        <option [value]="item.id" *ngFor="let item of cities"> {{item.name}} </option>
                                     </select>
                                 </div>
                             </div>
