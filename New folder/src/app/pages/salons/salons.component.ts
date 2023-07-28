@@ -131,7 +131,8 @@ export class SalonsComponent implements OnInit {
     this.salons = this.salons.filter((item) => {
       return item.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1;
     });
-    } else {
+    }
+   else if(searchValue == '') {
       this.salons = this.dummySalonList;
     }
   }
