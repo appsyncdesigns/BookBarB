@@ -85,7 +85,7 @@ export class SalonsComponent implements OnInit {
 
   getAllSalon() {
     this.salons = [];
-    this.dummySalons = Array(5);
+    this.dummySalons = [];
 
     this.api.get_private('v1/salon/getAll').then((data: any) => {
       this.dummySalons = [];
