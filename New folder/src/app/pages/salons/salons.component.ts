@@ -64,7 +64,7 @@ export class SalonsComponent implements OnInit {
   };
   salons: any[] = [];
   dummySalons: any[] = [];
-
+  dummySalonList: any[] = [];
   salonId: any = '';
   salonUID: any = '';
   action: any = 'create';
@@ -85,7 +85,7 @@ export class SalonsComponent implements OnInit {
 
   getAllSalon() {
     this.salons = [];
-    this.dummySalons = [];
+    this.dummySalons = Array(5);
 
     this.api.get_private('v1/salon/getAll').then((data: any) => {
       this.dummySalons = [];
@@ -93,7 +93,7 @@ export class SalonsComponent implements OnInit {
         console.log(">>>>>", data);
         if (data.data.length > 0) {
           this.salons = data.data;
-          this.dummySalons = this.salons;
+          this.dummySalonList = data.data;
           console.log("====", this.salons);
         }
       }
@@ -132,7 +132,7 @@ export class SalonsComponent implements OnInit {
       return item.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1;
     });
     } else {
-      this.salons = this.dummySalons;
+      this.salons = this.dummySalonList;
     }
   }
 
