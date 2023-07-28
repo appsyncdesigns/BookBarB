@@ -127,11 +127,16 @@ export class SalonsComponent implements OnInit {
 
   onSearchChange(searchValue: string): void {  
     console.log(searchValue);
+    this.resetChanges();
     if (searchValue && searchValue !== '') {
     this.salons = this.salons.filter((item) => {
       return item.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1;
     });
     }
+  }
+
+  protected resetChanges = () => {
+    this.salons = this.dummySalonList;
   }
 
   preview_banner(files: any) {
