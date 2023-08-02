@@ -146,9 +146,17 @@
                 <div class="center-data-helper">
                     <p class="text-heler">{{util.translate('Select Latitude')}} &amp;
                         {{util.translate('Longitude From here')}}:
-                        <a href="https://www.mapcoordinates.net/en" target="_blank"
+                        <!-- <a href="https://www.mapcoordinates.net/en" target="_blank"
                             rel="noopener noreferrer"
-                            style="color: blue !important;">https://www.mapcoordinates.net/en</a>
+                            style="color: blue !important;">https://www.mapcoordinates.net/en</a> -->
+                            <iframe width="700" height="100"
+                            style="border:0"
+                            loading="lazy"
+                            allowfullscreen
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBl9JDRCDTtjJp4EyarFtocFEgooa1FhmY
+                              &q=Space+Needle,Seattle+WA">
+                          </iframe>
                     </p>
 
                     <p class="text-heler"> {{util.translate('Please enter valid Latitude')}} &amp;
@@ -160,7 +168,7 @@
                     <div class="form-group">
                         <label class="form-control-label" for="input-email">
                             {{util.translate('Latitude')}}</label>
-                        <input type="number" id="input-email" class="form-control form-control-alternative"
+                        <input type="text" id="input-email" class="form-control form-control-alternative"
                             placeholder="Latitude" [(ngModel)]="lat">
                     </div>
                 </div>
@@ -168,7 +176,7 @@
                     <div class="form-group">
                         <label class="form-control-label" for="input-email">
                             {{util.translate('Longitude')}}</label>
-                        <input type="number" id="input-email" class="form-control form-control-alternative"
+                        <input type="text" id="input-email" class="form-control form-control-alternative"
                             placeholder="Longitude" [(ngModel)]="lng">
                     </div>
                 </div>
