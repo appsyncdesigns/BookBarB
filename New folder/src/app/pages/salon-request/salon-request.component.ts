@@ -151,7 +151,7 @@ export class SalonRequestComponent implements OnInit {
   }
 
   acceptRequest() {
-    if (this.email == '' || this.email == null || this.password == '' || this.password == null || 
+    if (this.password == '' || this.password == null || 
     this.country_code == '' || this.country_code == null || 
     this.lat == '' || this.lat == null ||  
     this.lng == '' || this.lng == null) {
@@ -169,7 +169,7 @@ export class SalonRequestComponent implements OnInit {
       gender: this.gender,
       cover: this.cover,
       mobile: this.mobile,
-      email: this.email,
+      // email: this.email,
       country_code: this.country_code,
       password: this.password
     };
