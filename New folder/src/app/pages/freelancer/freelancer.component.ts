@@ -294,7 +294,7 @@ export class FreelancerComponent implements OnInit {
       in_home: 1,
       extra_field: 'NA',
       background: 'NA',
-      rate: this.rate
+      // rate: this.rate
     };
     this.util.show();
     this.api.post_private('v1/individual/create', body).then((data: any) => {

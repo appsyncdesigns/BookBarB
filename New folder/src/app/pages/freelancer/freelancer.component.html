@@ -36,9 +36,9 @@
                                 <th scope="col"> {{util.translate("City")}} </th>
                                 <th scope="col"> {{util.translate("Categories")}} </th>
                                 <th scope="col"> {{util.translate("Rating")}} </th>
-                                <th scope="col"> {{util.translate("Have Shop")}} </th>
-                                <th scope="col"> {{util.translate("In Home")}} </th>
-                                <th scope="col"> {{util.translate("Is Popular")}} </th>
+                                <!-- <th scope="col"> {{util.translate("Have Shop")}} </th> -->
+                                <!-- <th scope="col"> {{util.translate("In Home")}} </th> -->
+                                <!-- <th scope="col"> {{util.translate("Is Popular")}} </th> -->
                                 <th scope="col"> {{util.translate("Action")}} </th>
                             </tr>
                         </thead>
@@ -75,25 +75,25 @@
                                     </div>
                                 </td>
                                 <td> {{item.rating}} / {{item.total_rating}} </td>
-                                <td>
+                                <!-- <td>
                                     <c-form-check [switch]="true">
                                         <input cFormCheckInput type="checkbox"
                                             [checked]="item.have_shop == 1? true:false" (change)="changeShop(item)" />
                                     </c-form-check>
-                                </td>
+                                </td> -->
 
-                                <td>
+                                <!-- <td>
                                     <c-form-check [switch]="true">
                                         <input cFormCheckInput type="checkbox" [checked]="item.in_home == 1? true:false"
                                             (change)="changeHome(item)" />
                                     </c-form-check>
-                                </td>
-                                <td>
+                                </td> -->
+                                <!-- <td>
                                     <c-form-check [switch]="true">
                                         <input cFormCheckInput type="checkbox" [checked]="item.popular == 1? true:false"
                                             (change)="changePopular(item)" />
                                     </c-form-check>
-                                </td>
+                                </td> -->
 
                                 <td>
                                     <div class="d-flex align-items-center">
