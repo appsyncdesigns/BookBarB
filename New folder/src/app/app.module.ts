@@ -57,6 +57,7 @@ import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 import { NgxSpinnerModule } from "ngx-spinner";
 import { NgChartsModule } from 'ng2-charts';
 import { LeaveGuard } from './leaved/leaved.guard';
@@ -70,6 +71,8 @@ export function LanguageLoader(http: HttpClient) {
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
 };
+
+const routes: Routes = [];
 
 const APP_CONTAINERS = [
   DefaultFooterComponent,
@@ -109,6 +112,7 @@ const APP_CONTAINERS = [
     HttpClientModule,
     NgxSpinnerModule,
     NgChartsModule,
+    RouterModule.forRoot(routes, { useHash: true }),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -120,7 +124,7 @@ const APP_CONTAINERS = [
   providers: [
     {
       provide: LocationStrategy,
-      useClass: HashLocationStrategy,
+      useClass: PathLocationStrategy,
     },
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
