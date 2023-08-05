@@ -58,7 +58,7 @@ export const subNavItems: INavData[] = [
   },
   {
     name: 'Homeservices',
-    url: '/homeservice',
+    url: '/freelancer',
     iconComponent: { name: 'cil-bank' },
     // children: [
     //   {
