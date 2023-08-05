@@ -109,7 +109,7 @@ export class FreelancerComponent implements OnInit {
         console.log('==>>>>>>', data.data);
         this.util.hide();
         if (data && data.data.image_name) {
-          this.cover = data.data.image_name;
+          this.cover = data.data;
         }
       }, err => {
         console.log(err);
