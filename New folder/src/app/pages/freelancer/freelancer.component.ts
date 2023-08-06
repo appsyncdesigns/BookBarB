@@ -187,11 +187,11 @@ export class FreelancerComponent implements OnInit {
     console.log(this.cover);
     console.log(this.have_shop);
 
-    if (this.firstName == '' || this.lastName == '' || this.email == '' || this.rate == ''
+    if (this.firstName == '' || this.lastName == '' || this.email == ''
       || this.password == '' || this.country_code == '' || this.mobile == ''
       || this.selectedItems.length <= 0 || this.cityID == ''
       || this.zipcode == '' || this.lat == '' || this.lng == '' || this.about == '' || this.address == ''
-      || this.mobile == null || this.cover == '' || this.fee_start == '' || this.fee_start == null) {
+      || this.mobile == null || this.cover == '') {
       this.util.error(this.util.translate('All Fields are required'));
       return false;
     }
@@ -529,7 +529,7 @@ export class FreelancerComponent implements OnInit {
   }
 
   updateSalon() {
-    if (this.cover == '' || this.address == '' || this.about == '' || this.rate == '' || this.cityID == '' || this.zipcode == '' || this.lat == '' || this.lng == '' || this.fee_start == '' || this.fee_start == null) {
+    if (this.cover == '' || this.address == '' || this.about == '' || this.cityID == '' || this.zipcode == '' || this.lat == '' || this.lng == '') {
       this.util.error(this.util.translate('All Fields are required'));
       return false;
     }
