@@ -542,6 +542,11 @@ export class FreelancerComponent implements OnInit {
     console.log(ids);
     const body = {
       id: this.individualId,
+      first_name:this.firstName,
+      last_name: this.lastName,
+      email: this.email,
+      password: this.password,
+      mobile: this.mobile,
       lat: this.lat,
       lng: this.lng,
       cover: this.cover,
