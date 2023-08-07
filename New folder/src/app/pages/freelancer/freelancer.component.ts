@@ -468,13 +468,18 @@ export class FreelancerComponent implements OnInit {
       this.util.hide();
       if (data && data.status && data.status == 200) {
         this.action = 'update';
+        this.firstName= data.data.userinfo.first_name;
+        this.lastName= data.data.userinfo.last_name;
         this.selectedItems = data.data.web_cates_data;
         this.cityID = data.data.cid;
         this.zipcode = data.data.zipcode;
+        this.password = data.data.password;
         this.lat = data.data.lat;
         this.lng = data.data.lng;
         this.about = data.data.about;
         this.cover = data.data.cover;
+        this.email = data.data.userinfo.email;
+        this.mobile = data.data.userinfo.mobile;
         this.address = data.data.address;
         this.have_shop = data.data.have_shop;
         this.fee_start = data.data.fee_start;
