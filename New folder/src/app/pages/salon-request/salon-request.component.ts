@@ -64,7 +64,7 @@ export class SalonRequestComponent implements OnInit {
     const param = {
       cid: this.c_id
     }
-    this.api.post('v1/request/getSalonRequest',param).then((data: any) => {
+    this.api.post_private('v1/request/getSalonRequest',param).then((data: any) => {
       this.dummyFreelacer = [];
       console.log(data);
       if (data && data.status && data.status == 200 && data.success) {
