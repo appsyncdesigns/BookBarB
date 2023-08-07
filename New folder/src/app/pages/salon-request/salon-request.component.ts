@@ -39,7 +39,7 @@ export class SalonRequestComponent implements OnInit {
   lng: any = '';
   descriptions: any = '';
   cityID: any = '';
-  cid: any = '';
+  cityid: any = '';
   zipcode: any = '';
   experience: any = '';
   freelancerId: any = '';
@@ -58,11 +58,11 @@ export class SalonRequestComponent implements OnInit {
   ngOnInit(): void {
   }
   getFreelancer() {
-    this.cid = localStorage.getItem('cityid');
+    this.cityid = localStorage.getItem('uid');
     this.dummyFreelacer = Array(5);
     this.freelancers = [];
     const param = {
-      cid: this.cid
+      cityid: this.cityid
     }
     this.api.post_private('v1/request/getSalonRequest',param).then((data: any) => {
       this.dummyFreelacer = [];
