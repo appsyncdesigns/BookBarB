@@ -39,12 +39,15 @@ export class SalonRequestComponent implements OnInit {
   lng: any = '';
   descriptions: any = '';
   cityID: any = '';
+  c_id: any = '';
   zipcode: any = '';
   experience: any = '';
   freelancerId: any = '';
   rate: any = '';
   name: any = '';
   address: any = '';
+  loginType: any = '';
+
   constructor(
     public util: UtilService,
     public api: ApiService
@@ -55,9 +58,13 @@ export class SalonRequestComponent implements OnInit {
   ngOnInit(): void {
   }
   getFreelancer() {
+    this.c_id = localStorage.getItem('cityid');
     this.dummyFreelacer = Array(5);
     this.freelancers = [];
-    this.api.get_private('v1/request/getSalonRequest').then((data: any) => {
+    const param = {
+      cid: this.c_id
+    }
+    this.api.post('v1/request/getSalonRequest',param).then((data: any) => {
       this.dummyFreelacer = [];
       console.log(data);
       if (data && data.status && data.status == 200 && data.success) {

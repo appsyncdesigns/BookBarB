@@ -53,6 +53,7 @@ export class LoginComponent {
         localStorage.setItem('uid', data.user.id);
         localStorage.setItem('token', data.token);
         localStorage.setItem('type', data.user.type);
+        localStorage.setItem('cityid', data.city.id);
         this.router.navigate(['']);
       } else if (data && data.status == 401 && data.error.error) {
         this.util.error(data.error.error);
