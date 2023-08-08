@@ -55,7 +55,7 @@ export class FreelancerComponent implements OnInit {
   individualUID: any = '';
   action: any = 'create';
   page: number = 1;
-  rate: any = '';
+  rate: any = '0';
   constructor(
     public api: ApiService,
     public util: UtilService,
