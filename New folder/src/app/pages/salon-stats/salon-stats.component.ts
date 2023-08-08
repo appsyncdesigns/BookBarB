@@ -101,6 +101,7 @@ export class SalonStatsComponent implements OnInit {
           let grand_total = 0;
 
           data.data.forEach(async (element: any) => {
+            grand_total = grand_total + element.grand_total;
             if (((x) => { try { JSON.parse(x); return true; } catch (e) { return false } })(element.items)) {
               element.items = JSON.parse(element.items);
               element.save_date = moment(element.save_date).format('dddd, MMMM Do YYYY');
@@ -109,10 +110,8 @@ export class SalonStatsComponent implements OnInit {
                   element.items.services.forEach((sub: any) => {
                     if (sub.off > 0) {
                       total = total + parseFloat(sub.off);
-                      grand_total = grand_total + parseFloat(sub.off);
                     } else {
                       total = total + parseFloat(sub.price);
-                      grand_total = grand_total + parseFloat(sub.price);
                     }
                   });
                 }
@@ -121,10 +120,8 @@ export class SalonStatsComponent implements OnInit {
                   element.items.packages.forEach((sub: any) => {
                     if (sub.off > 0) {
                       total = total + parseFloat(sub.off);
-                      grand_total = grand_total + parseFloat(sub.off);
                     } else {
                       total = total + parseFloat(sub.price);
-                      grand_total = grand_total + parseFloat(sub.price);
                     }
                   });
                 }
