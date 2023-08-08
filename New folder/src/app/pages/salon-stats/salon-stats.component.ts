@@ -93,8 +93,8 @@ export class SalonStatsComponent implements OnInit {
         this.util.hide();
         console.log(data);
         if (data && data.status == 200 && data.data.length) {
-          this.freelancerCommistion = parseFloat(data.commission.rate).toFixed(2);
-          console.log('commustion', this.freelancerCommistion);
+          // this.freelancerCommistion = parseFloat(data.commission.rate).toFixed(2);
+          // console.log('commustion', this.freelancerCommistion);
           let total = 0;
           data.data.forEach(async (element: any) => {
             if (((x) => { try { JSON.parse(x); return true; } catch (e) { return false } })(element.items)) {
@@ -132,11 +132,11 @@ export class SalonStatsComponent implements OnInit {
             }
             console.log(this.appointments);
             console.log(total, this.freelancerCommistion);
-            const totalPrice = percentage(total, parseFloat(this.freelancerCommistion));
-            console.log('commistion==>>>>>', totalPrice.toFixed(2));
-            this.commisionAmount = totalPrice.toFixed(2);
+            // const totalPrice = percentage(total, parseFloat(this.freelancerCommistion));
+            // console.log('commistion==>>>>>', totalPrice.toFixed(2));
+            // this.commisionAmount = totalPrice.toFixed(2);
             this.totalAmount = total;
-            this.toPay = this.commisionAmount;
+            // this.toPay = this.commisionAmount;
           }, 1000);
 
         }
