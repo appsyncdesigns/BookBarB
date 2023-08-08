@@ -32,6 +32,8 @@ export class SalonStatsComponent implements OnInit {
   freelancerCommistion: any = 0;
 
   totalAmount: any = 0;
+  grandTotalAmount: any = 0;
+
   commisionAmount: any = 0;
   toPay: any = 0;
   constructor(
@@ -96,6 +98,8 @@ export class SalonStatsComponent implements OnInit {
           // this.freelancerCommistion = parseFloat(data.commission.rate).toFixed(2);
           // console.log('commustion', this.freelancerCommistion);
           let total = 0;
+          let grand_total = 0;
+
           data.data.forEach(async (element: any) => {
             if (((x) => { try { JSON.parse(x); return true; } catch (e) { return false } })(element.items)) {
               element.items = JSON.parse(element.items);
@@ -105,8 +109,10 @@ export class SalonStatsComponent implements OnInit {
                   element.items.services.forEach((sub: any) => {
                     if (sub.off > 0) {
                       total = total + parseFloat(sub.off);
+                      grand_total = grand_total + parseFloat(sub.off);
                     } else {
                       total = total + parseFloat(sub.price);
+                      grand_total = grand_total + parseFloat(sub.price);
                     }
                   });
                 }
@@ -115,8 +121,10 @@ export class SalonStatsComponent implements OnInit {
                   element.items.packages.forEach((sub: any) => {
                     if (sub.off > 0) {
                       total = total + parseFloat(sub.off);
+                      grand_total = grand_total + parseFloat(sub.off);
                     } else {
                       total = total + parseFloat(sub.price);
+                      grand_total = grand_total + parseFloat(sub.price);
                     }
                   });
                 }
@@ -136,6 +144,7 @@ export class SalonStatsComponent implements OnInit {
             // console.log('commistion==>>>>>', totalPrice.toFixed(2));
             // this.commisionAmount = totalPrice.toFixed(2);
             this.totalAmount = total;
+            this.grandTotalAmount = grand_total;
             // this.toPay = this.commisionAmount;
           }, 1000);
 

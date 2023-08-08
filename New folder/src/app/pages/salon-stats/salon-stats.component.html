@@ -163,6 +163,10 @@
                                             <p
                                                 style="text-align: right;font-weight: bold;margin: 0px !important;color: #7EC6AA;;">
                                                 {{util.translate('Total')}} </p>
+                                             <p
+                                                style="text-align: right;font-weight: bold;margin: 0px !important;color: #7EC6AA;;">
+                                                {{util.translate('Grand Total')}}
+                                            </p>
                                             <!-- <p
                                                 style="text-align: right;font-weight: bold;margin: 0px !important;color: #7EC6AA;;">
                                                 {{util.translate('Commission')}}
@@ -179,6 +183,14 @@
                                                 <span *ngIf="util.cside =='left'">{{util.currecny}} {{totalAmount}}
                                                 </span>
                                                 <span *ngIf="util.cside =='right'">{{totalAmount}}
+                                                    {{util.currecny}}</span>
+                                            </p>
+                                            <p
+                                                style="color: black !important; margin: 0px !important;text-align: right;">
+
+                                                <span *ngIf="util.cside =='left'">{{util.currecny}} {{grandTotalAmount}}
+                                                </span>
+                                                <span *ngIf="util.cside =='right'">{{grandTotalAmount}}
                                                     {{util.currecny}}</span>
                                             </p>
                                             <!-- <p
