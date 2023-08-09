@@ -14,7 +14,7 @@
             <div class="card">
                 <div class="card-header">
                     {{util.translate('Homeservice')}}
-                    <div class="card-header-actions">
+                    <div class="card-header-actions" *ngIf="flag == 0">
                         <button type="submit" class="btn btn-sm btn-primary" style="float: right;margin: 0px 5px;"
                             (click)="createNew()">
                             {{util.translate('Add New')}}

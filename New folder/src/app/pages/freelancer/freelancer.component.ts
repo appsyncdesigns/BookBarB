@@ -20,6 +20,7 @@ import Swal from 'sweetalert2';
 export class FreelancerComponent implements OnInit {
   @ViewChild('myModal2') public myModal2: ModalDirective;
   firstName: any = '';
+  flag = 0;
   lastName: any = '';
   email: any = '';
   password: any = '';
@@ -304,7 +305,8 @@ export class FreelancerComponent implements OnInit {
         this.myModal2.hide();
         this.getAllIndividual();
         this.clearData();
-        this.util.success(this.util.translate('Individual added !'));
+        this.util.success(this.util.translate('Homeservice added !'));
+        this.flag = 1;
       }
     }, error => {
       this.util.hide();
@@ -443,6 +445,7 @@ export class FreelancerComponent implements OnInit {
           console.log("+++++++++++++++", data);
           if (data && data.status && data.status == 200 && data.success) {
             this.util.success(this.util.translate('Status Updated !'));
+            this.flag = 0;
             this.getAllIndividual();
           }
         }, error => {
