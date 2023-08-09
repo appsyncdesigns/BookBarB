@@ -332,6 +332,7 @@ export class FreelancerComponent implements OnInit {
     this.about = '';
     this.cover = '';
     this.fee_start = '';
+    this.address = '';
     this.rate = '';
     this.have_shop = false;
   }
