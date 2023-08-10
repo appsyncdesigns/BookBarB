@@ -35,7 +35,7 @@ export class FreelancerComponent implements OnInit {
   lat: any = '';
   address: any = '';
   have_shop: any = false;
-
+  cityid: any = '';
   lng: any = '';
   about: any = '';
   website: any = '';
@@ -70,10 +70,13 @@ export class FreelancerComponent implements OnInit {
   }
 
   getAllIndividual() {
+    this.cityid = localStorage.getItem('uid');
     this.individuals = [];
     this.dummyIndivuduals = Array(5);
-
-    this.api.get_private('v1/individual/getAll').then((data: any) => {
+    const param = {
+      cityid: this.cityid
+    }
+    this.api.post_private('v1/individual/getAll',param).then((data: any) => {
       this.dummyIndivuduals = [];
       if (data && data.status && data.status == 200 && data.success) {
         console.log(">>>>>", data);
