@@ -51,7 +51,7 @@
                             <tr
                                 *ngFor="let item of individuals | paginate: {id:'pagin1', itemsPerPage: 10, currentPage: page };let i = index;">
                                 <th scope="row">
-                                    {{item.id}}
+                                    {{item.data_id}}
                                 </th>
                                 <td>
                                     <img class="img-responsive" style="height: 40px;width: 40px; object-fit: cover;"
