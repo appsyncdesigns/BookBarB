@@ -36,6 +36,7 @@ export class FreelancerComponent implements OnInit {
   address: any = '';
   have_shop: any = false;
   cityid: any = '';
+  flag: any = 0;
   lng: any = '';
   about: any = '';
   website: any = '';
@@ -309,7 +310,7 @@ export class FreelancerComponent implements OnInit {
         this.getAllIndividual();
         this.clearData();
         this.util.success(this.util.translate('Homeservice added !'));
-        // this.flag = 1;
+        this.flag = 1;
       }
     }, error => {
       this.util.hide();
