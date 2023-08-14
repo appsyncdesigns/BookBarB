@@ -602,7 +602,7 @@ export class SalonsComponent implements OnInit {
         this.selectedItems = data.data.web_cates_data;
         this.cityID = data.data.cid;
         this.zipcode = data.data.zipcode;
-        this.password = data.data.password;
+        this.password = this.password;
         this.lat = data.data.lat;
         this.lng = data.data.lng;
         this.about = data.data.about;
