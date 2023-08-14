@@ -6,7 +6,7 @@
   terms found in the Website https://initappz.com/license
   Copyright and Good Faith Purchasers © 2022-present initappz.
 */
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy,ViewChild } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { UtilService } from 'src/app/services/util.service';
 import { ModalDirective } from 'ngx-bootstrap/modal';
@@ -20,7 +20,6 @@ import Swal from 'sweetalert2';
 export class FreelancerComponent implements OnInit {
   @ViewChild('myModal2') public myModal2: ModalDirective;
   firstName: any = '';
-  // flag = 0;
   lastName: any = '';
   email: any = '';
   password: any = '';
@@ -274,6 +273,7 @@ export class FreelancerComponent implements OnInit {
   saveSalonProfile(uid: any) {
     console.log('uid', uid);
     const ids = this.selectedItems.map((x: any) => x.id);
+    const flag = 0;
     console.log(ids);
     const body = {
       uid: uid,
@@ -575,7 +575,7 @@ export class FreelancerComponent implements OnInit {
         this.myModal2.hide();
         this.getAllIndividual();
         this.clearData();
-        this.util.success(this.util.translate('Individual updated !'));
+        this.util.success(this.util.translate('Homeservice updated !'));
       }
     }, error => {
       this.util.hide();
