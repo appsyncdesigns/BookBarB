@@ -327,7 +327,7 @@ export class OffersComponent implements OnInit {
         // this.max_usage = info.max_usage;
         // this.min_cart_value = info.min_cart_value;
         // this.user_limit_validation = info.user_limit_validation;
-        this.expire = moment(info.expire).format('dd/mm/yyyy');
+        this.expire = info.expire;
         // this.value = info.freelancers;
         this.myModal2.show();
       }
