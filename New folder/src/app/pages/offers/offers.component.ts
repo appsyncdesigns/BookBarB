@@ -252,10 +252,12 @@ export class OffersComponent implements OnInit {
     //   return false;
     // }
 
+    
+
     if (this.name == '' || this.name == null || this.off == '' || this.off == null || 
-      this.type == '' || this.type == null || this.descriptions == null || this.descriptions == '' || this.expire == '' || this.expire == null ) {
-      this.util.error(this.util.translate('All Fields are required'));
-      return false;
+    this.type == '' || this.type == null || this.descriptions == null || this.descriptions == '' || this.expire == '' || this.expire == null ) {
+    this.util.error(this.util.translate(' required'));
+    return false;
     }
 
     // if (this.value == '' || this.value == null || this.value.length <= 0) {
