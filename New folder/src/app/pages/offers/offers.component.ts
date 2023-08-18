@@ -255,8 +255,8 @@ export class OffersComponent implements OnInit {
     
 
     if (this.name == '' || this.name == null || this.off == '' || this.off == null || 
-    this.type == '' || this.type == null || this.descriptions == null || this.descriptions == '' || this.expire == '' || this.expire == null ) {
-    this.util.error(this.util.translate(' required'));
+   this.descriptions == null || this.descriptions == '' || this.expire == '' || this.expire == null ) {
+    this.util.error(this.util.translate('All fields are required'));
     return false;
     }
 
