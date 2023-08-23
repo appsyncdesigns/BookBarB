@@ -25,6 +25,7 @@ export class SalonsComponent implements OnInit {
   password: any = '';
   country_code: any = '';
   mobile: any = '';
+  cityid: any = '';
   gender: any = '1';
   cover: any = '';
   categories: any[] = [];
@@ -86,8 +87,11 @@ export class SalonsComponent implements OnInit {
   getAllSalon() {
     this.salons = [];
     this.dummySalons = Array(5);
-
-    this.api.get_private('v1/salon/getAll').then((data: any) => {
+    this.cityid = localStorage.getItem('uid');
+    const param = {
+      cityid: this.cityid
+    }
+    this.api.post_private('v1/salon/getAll',param).then((data: any) => {
       this.dummySalons = [];
       if (data && data.status && data.status == 200 && data.success) {
         console.log(">>>>>", data);
