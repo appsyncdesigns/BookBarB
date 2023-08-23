@@ -175,6 +175,8 @@ export class CitiesComponent implements OnInit {
         this.name = data.data.name;
         this.lat = data.data.lat;
         this.lng = data.data.lng;
+        this.email = data.data.userInfo.email;
+        this.password = data.data.userInfo.password;
       }
     }, error => {
       this.util.hide();
