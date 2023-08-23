@@ -22,9 +22,18 @@
                                 [placeholder]="util.translate('City Name')" [ngModelOptions]="{standalone: true}">
                         </div>
 
-                        <p class="text-heler">{{util.translate('Select Latitude & Longitude From here:')}} <a
+                        <p class="text-heler">{{util.translate('Select Latitude & Longitude From here:')}} 
+                            <!-- <a
                                 href="https://www.mapcoordinates.net/en" target="_blank" rel="noopener noreferrer"
-                                style="color: blue !important;">https://www.mapcoordinates.net/en</a>
+                                style="color: blue !important;">https://www.mapcoordinates.net/en</a> -->
+                                <iframe width="250" height="50"
+                                        style="border:0"
+                                        loading="lazy"
+                                        allowfullscreen
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBl9JDRCDTtjJp4EyarFtocFEgooa1FhmY
+                                          &q=Space+Needle,Seattle+WA">
+                                      </iframe>
                         </p>
                         <p class="text-heler">
                             {{util.translate('Please enter valid Latitude & Longitude otherwise app may not work
