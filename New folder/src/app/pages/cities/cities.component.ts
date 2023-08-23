@@ -313,6 +313,8 @@ export class CitiesComponent implements OnInit {
       const body = {
         id: this.cityId,
         name: this.name,
+        email: this.email,
+        password: this.password
       };
       console.log("======", body);
       this.util.show();
