@@ -21,6 +21,7 @@ export class SalonStatsComponent implements OnInit {
   dummyFreelacer: any[] = [];
 
   freelancerUId: any = '';
+  cityid: any = '';
 
   from: any = '';
   to: any = '';
@@ -50,7 +51,11 @@ export class SalonStatsComponent implements OnInit {
   getFreelancer() {
     this.dummyFreelacer = Array(5);
     this.freelancers = [];
-    this.api.get_private('v1/salon/getAll').then((data: any) => {
+    this.cityid = localStorage.getItem('uid');
+    const param = {
+      cityid: this.cityid
+    }
+    this.api.post_private('v1/salon/getAll',param).then((data: any) => {
       this.dummyFreelacer = [];
       console.log(data);
       if (data && data.status && data.status == 200 && data.success) {
