@@ -37,7 +37,7 @@
                             </tr>
                             <tr
                                 *ngFor="let item of list | paginate: {id:'pagin1', itemsPerPage: 10, currentPage: page }">
-                                <td> {{item.id}} </td>
+                                <td> {{item.data_id}} </td>
                                 <td>
                                     {{item.first_name}} {{item.last_name}}
                                 </td>

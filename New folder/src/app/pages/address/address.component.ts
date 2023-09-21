@@ -73,7 +73,7 @@ export class AddressComponent implements OnInit {
         console.log('update it');
 
         this.util.show();
-        this.api.post_private('v1/address/delete', { id: item.data_id }).then((data: any) => {
+        this.api.post_private('v1/address/delete', { id: item.id }).then((data: any) => {
           console.log(data);
           this.util.hide();
           if (data && data.status && data.status == 200) {
