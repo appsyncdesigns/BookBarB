@@ -11,7 +11,6 @@ import { ApiService } from 'src/app/services/api.service';
 import { UtilService } from 'src/app/services/util.service';
 import { ModalDirective } from 'ngx-bootstrap/modal';
 import Swal from 'sweetalert2';
-let flag=0;
 @Component({
   selector: 'app-freelancer',
   templateUrl: './freelancer.component.html',
@@ -35,7 +34,7 @@ export class FreelancerComponent implements OnInit {
   address: any = '';
   have_shop: any = false;
   cityid: any = '';
-  // flag: any = 0;
+  flag: any = 0;
   lng: any = '';
   about: any = '';
   website: any = '';
@@ -310,7 +309,7 @@ export class FreelancerComponent implements OnInit {
         this.getAllIndividual();
         this.clearData();
         this.util.success(this.util.translate('Homeservice added !'));
-        flag = 1;
+        this.flag = 1;
       }
     }, error => {
       this.util.hide();
